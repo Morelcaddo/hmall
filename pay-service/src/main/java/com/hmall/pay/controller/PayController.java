@@ -1,5 +1,6 @@
 package com.hmall.pay.controller;
 
+import ch.qos.logback.classic.Logger;
 import com.hmall.common.exception.BizIllegalException;
 import com.hmall.common.utils.BeanUtils;
 import com.hmall.pay.domain.dto.PayApplyDTO;
@@ -11,12 +12,14 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @Api(tags = "支付相关接口")
 @RestController
+@Slf4j
 @RequestMapping("pay-orders")
 @RequiredArgsConstructor
 public class PayController {
@@ -43,6 +46,8 @@ public class PayController {
     @ApiImplicitParam(value = "支付单id", name = "id")
     @PostMapping("{id}")
     public void tryPayOrderByBalance(@PathVariable("id") Long id, @RequestBody PayOrderFormDTO payOrderFormDTO){
+        log.info(payOrderFormDTO.toString());
+        log.info(payOrderFormDTO.getPw());
         payOrderFormDTO.setId(id);
         payOrderService.tryPayOrderByBalance(payOrderFormDTO);
     }

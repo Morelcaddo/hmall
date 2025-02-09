@@ -18,6 +18,8 @@ import com.hmall.trade.domain.po.Order;
 import com.hmall.user.api.client.UserClient;
 import io.seata.spring.annotation.GlobalTransactional;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -32,11 +34,12 @@ import java.time.LocalDateTime;
  * @since 2023-05-16
  */
 @Service
+@Slf4j
 @RequiredArgsConstructor
 public class PayOrderServiceImpl extends ServiceImpl<PayOrderMapper, PayOrder> implements IPayOrderService {
 
-    private final TradeClient tradeClient;
     private final UserClient userClient;
+    private final RabbitTemplate rabbitTemplate;
 
     @Override
     public String applyPayOrder(PayApplyDTO applyDTO) {
@@ -63,12 +66,13 @@ public class PayOrderServiceImpl extends ServiceImpl<PayOrderMapper, PayOrder> i
         if (!success) {
             throw new BizIllegalException("交易已支付或关闭！");
         }
-        // 5.修改订单状态
-        Order order = new Order();
-        order.setId(po.getBizOrderNo());
-        order.setStatus(2);
-        order.setPayTime(LocalDateTime.now());
-        tradeClient.updateById(order);
+        //5.修改订单状态
+        try {
+            rabbitTemplate.convertAndSend("pay.direct","pay.success", po.getBizOrderNo());
+        }catch (Exception e){
+            log.error("发送日志状态通知失败");
+        }
+
     }
 
     public boolean markPayOrderSuccess(Long id, LocalDateTime successTime) {
