@@ -13,8 +13,6 @@ import com.hmall.pay.domain.po.PayOrder;
 import com.hmall.pay.enums.PayStatus;
 import com.hmall.pay.mapper.PayOrderMapper;
 import com.hmall.pay.service.IPayOrderService;
-import com.hmall.trade.api.client.TradeClient;
-import com.hmall.trade.domain.po.Order;
 import com.hmall.user.api.client.UserClient;
 import io.seata.spring.annotation.GlobalTransactional;
 import lombok.RequiredArgsConstructor;
@@ -60,7 +58,12 @@ public class PayOrderServiceImpl extends ServiceImpl<PayOrderMapper, PayOrder> i
             throw new BizIllegalException("交易已支付或关闭！");
         }
         // 3.尝试扣减余额
-        userClient.deductMoney(payOrderFormDTO.getPw(), po.getAmount());
+        try{
+            userClient.deductMoney(payOrderFormDTO.getPw(), po.getAmount());
+        }catch(Exception e){
+            throw new RuntimeException(e);
+        }
+
         // 4.修改支付单状态
         boolean success = markPayOrderSuccess(payOrderFormDTO.getId(), LocalDateTime.now());
         if (!success) {
@@ -74,6 +77,7 @@ public class PayOrderServiceImpl extends ServiceImpl<PayOrderMapper, PayOrder> i
         }
 
     }
+
 
     public boolean markPayOrderSuccess(Long id, LocalDateTime successTime) {
         return lambdaUpdate()

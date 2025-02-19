@@ -96,10 +96,10 @@
             <version>1.0.0</version>
             <scope>compile</scope>
         </dependency>
-        <!--cart-service依赖-->
+        <!--pay-service依赖-->
         <dependency>
             <groupId>com.heima</groupId>
-            <artifactId>cart-service</artifactId>
+            <artifactId>pay-service</artifactId>
             <version>1.0.0</version>
             <scope>compile</scope>
         </dependency>
