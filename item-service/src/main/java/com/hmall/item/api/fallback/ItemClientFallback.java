@@ -1,15 +1,19 @@
 package com.hmall.item.api.fallback;
 
 import com.hmall.common.domain.OrderDetailDTO;
+import com.hmall.common.domain.PageDTO;
+import com.hmall.common.domain.PageQuery;
 import com.hmall.common.exception.BizIllegalException;
 import com.hmall.common.utils.CollUtils;
 import com.hmall.item.api.client.ItemClient;
 import com.hmall.item.domain.dto.ItemDTO;
+import com.hmall.item.domain.po.Item;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.openfeign.FallbackFactory;
 
 import java.util.Collection;
 import java.util.List;
+
 @Slf4j
 public class ItemClientFallback implements FallbackFactory<ItemClient> {
     @Override
@@ -27,6 +31,19 @@ public class ItemClientFallback implements FallbackFactory<ItemClient> {
                 // 库存扣减业务需要触发事务回滚，查询失败，抛出异常
                 throw new BizIllegalException(cause);
             }
+
+            @Override
+            public ItemDTO queryItemById(Long id) {
+                log.error("远程调用ItemClient#queryItemById方法出现异常，参数：{}", id, cause);
+                return null;
+            }
+
+            @Override
+            public PageDTO<ItemDTO> queryItemByPage(PageQuery query) {
+                log.error("远程调用ItemClient#queryItemByPage方法出现异常，参数：{}", query, cause);
+                return null;
+            }
+
         };
     }
 }

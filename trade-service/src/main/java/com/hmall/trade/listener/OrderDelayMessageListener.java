@@ -24,16 +24,16 @@ public class OrderDelayMessageListener {
             key = MQConstants.DELAY_ORDER_KEY
     ))
     public void listenOrderDelayMessage(Long orderId) {
-        log.info("收到延时消息，准备取消订单");
+        log.info("收到延时消息，正在检查订单状态");
         Order order = orderService.getById(orderId);
-        if(order == null || order.getStatus() != 1){
+        if (order == null || order.getStatus() != 1) {
             return;
         }
 
         PayOrderDTO payOrderDTO = payClient.queryPayOrderByBizOrderNo(orderId);
-        if(payOrderDTO != null && payOrderDTO.getStatus() == 3){
+        if (payOrderDTO != null && payOrderDTO.getStatus() == 3) {
             orderService.markOrderPaySuccess(orderId);
-        }else{
+        } else {
             orderService.cancelOrder(orderId);
         }
     }
