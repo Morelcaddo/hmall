@@ -28,7 +28,7 @@ public interface ItemClient {
     @GetMapping("/items/{id}")
     ItemDTO queryItemById(@PathVariable("id") Long id);
 
-    @GetMapping("/items/page")
-    PageDTO<ItemDTO> queryItemByPage(@SpringQueryMap PageQuery query);
+    @GetMapping("/items/page/es")
+    PageDTO<Item> queryItemByPageToEs(@SpringQueryMap PageQuery query);
 
 }

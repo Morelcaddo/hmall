@@ -8,7 +8,7 @@ import com.hmall.common.domain.PageDTO;
 import com.hmall.common.domain.PageQuery;
 import com.hmall.common.utils.CollUtils;
 import com.hmall.item.api.client.ItemClient;
-import com.hmall.item.domain.dto.ItemDTO;
+import com.hmall.item.domain.po.Item;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.http.HttpHost;
@@ -84,14 +84,14 @@ public class RestClientConfig {
         while (true) {
             pageQuery.setPageNo(pageNo);
             pageQuery.setPageSize(pageSize);
-            PageDTO<ItemDTO> result = itemClient.queryItemByPage(pageQuery);
-            List<ItemDTO> items = result.getList();
+            PageDTO<Item> result = itemClient.queryItemByPageToEs(pageQuery);
+            List<Item> items = result.getList();
             if (CollUtils.isEmpty(items)) {
                 log.info("初始化文档完成,共{}页", pageNo);
                 return;
             }
             BulkRequest request = new BulkRequest(indexName);
-            for (ItemDTO item : items) {
+            for (Item item : items) {
                 ItemDoc itemDoc = BeanUtil.copyProperties(item, ItemDoc.class);
                 request.add(new IndexRequest()
                         .id(itemDoc.getId())

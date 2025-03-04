@@ -1,6 +1,7 @@
 package com.hmall.item.controller;
 
 
+import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.hmall.common.domain.OrderDetailDTO;
 import com.hmall.common.domain.PageDTO;
@@ -8,6 +9,7 @@ import com.hmall.common.domain.PageQuery;
 import com.hmall.common.utils.BeanUtils;
 import com.hmall.item.domain.dto.ItemDTO;
 import com.hmall.item.domain.po.Item;
+import com.hmall.item.domain.query.ItemPageQuery;
 import com.hmall.item.service.IItemService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -33,6 +35,15 @@ public class ItemController {
         Page<Item> result = itemService.page(query.toMpPage("update_time", false));
         // 2.封装并返回
         return PageDTO.of(result, ItemDTO.class);
+    }
+
+    @ApiOperation("分页查询数据到es")
+    @GetMapping("/page/es")
+    public PageDTO<Item> queryItemByPageToEs(PageQuery query) {
+        Page<Item> result = itemService.lambdaQuery()
+                .eq(Item::getStatus, 1)
+                .page(query.toMpPage("update_time", false));
+        return PageDTO.of(result);
     }
 
     @ApiOperation("根据id批量查询商品")

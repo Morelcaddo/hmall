@@ -39,11 +39,10 @@ public class ItemClientFallback implements FallbackFactory<ItemClient> {
             }
 
             @Override
-            public PageDTO<ItemDTO> queryItemByPage(PageQuery query) {
-                log.error("远程调用ItemClient#queryItemByPage方法出现异常，参数：{}", query, cause);
+            public PageDTO<Item> queryItemByPageToEs(PageQuery query) {
+                log.error("远程调用ItemClient#queryItemByPageToEs方法出现异常，参数：{}", query, cause);
                 return null;
             }
-
         };
     }
 }
