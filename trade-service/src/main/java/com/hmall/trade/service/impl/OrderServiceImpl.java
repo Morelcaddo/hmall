@@ -68,6 +68,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
         if (items == null || items.size() < itemIds.size()) {
             throw new BadRequestException("商品不存在");
         }
+        log.info("查询到商品信息，总条数：{}", items.size());
         // 1.4.基于商品价格、购买数量计算商品总价：totalFee
         int total = 0;
         for (ItemDTO item : items) {

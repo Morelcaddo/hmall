@@ -1,48 +1,757 @@
-00:06:53:761  INFO 38716 --- [nacos-grpc-client-executor-1883] com.alibaba.nacos.common.remote.client   : [0ca592bb-7633-4e75-a09b-69317419d745_config-0] Receive server push request, request = ClientDetectionRequest, requestId = 9
-00:06:53:758  INFO 38716 --- [nacos-grpc-client-executor-1899] com.alibaba.nacos.common.remote.client   : [a2abc2d6-a243-4afa-b58a-e9c38ac8c4c1] Receive server push request, request = ClientDetectionRequest, requestId = 10
-00:06:54:034  INFO 38716 --- [nacos-grpc-client-executor-1899] com.alibaba.nacos.common.remote.client   : [a2abc2d6-a243-4afa-b58a-e9c38ac8c4c1] Ack server push request, request = ClientDetectionRequest, requestId = 10
-00:06:54:034  INFO 38716 --- [nacos-grpc-client-executor-1883] com.alibaba.nacos.common.remote.client   : [0ca592bb-7633-4e75-a09b-69317419d745_config-0] Ack server push request, request = ClientDetectionRequest, requestId = 9
-00:06:54:077 ERROR 38716 --- [nacos-grpc-client-executor-1883] c.a.n.c.remote.client.grpc.GrpcClient    : [1741090247706_192.168.230.1_55699]Request stream onCompleted, switch server
-00:06:54:170  INFO 38716 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [0ca592bb-7633-4e75-a09b-69317419d745_config-0] Server healthy check fail, currentConnection = 1741090247706_192.168.230.1_55699
-00:06:54:174  INFO 38716 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [0ca592bb-7633-4e75-a09b-69317419d745_config-0] Try to reconnect to a new server, server is  not appointed, will choose a random server.
-00:06:54:240 ERROR 38716 --- [nacos-grpc-client-executor-1900] c.a.n.c.remote.client.grpc.GrpcClient    : [1741090254583_192.168.230.1_55737]Request stream onCompleted, switch server
-00:06:54:242  INFO 38716 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [a2abc2d6-a243-4afa-b58a-e9c38ac8c4c1] Try to reconnect to a new server, server is  not appointed, will choose a random server.
-00:06:54:565  INFO 38716 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [a2abc2d6-a243-4afa-b58a-e9c38ac8c4c1] Success to connect a server [192.168.230.130:8848], connectionId = 1741100302627_192.168.230.1_60061
-00:06:54:565  INFO 38716 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [0ca592bb-7633-4e75-a09b-69317419d745_config-0] Success to connect a server [192.168.230.130:8848], connectionId = 1741100302594_192.168.230.1_60060
-00:06:54:566  INFO 38716 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [a2abc2d6-a243-4afa-b58a-e9c38ac8c4c1] Abandon prev connection, server is 192.168.230.130:8848, connectionId is 1741090254583_192.168.230.1_55737
-00:06:54:566  INFO 38716 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [0ca592bb-7633-4e75-a09b-69317419d745_config-0] Abandon prev connection, server is 192.168.230.130:8848, connectionId is 1741090247706_192.168.230.1_55699
-00:06:54:567  INFO 38716 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : Close current connection 1741090254583_192.168.230.1_55737
-00:06:54:567  INFO 38716 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : Close current connection 1741090247706_192.168.230.1_55699
-00:06:54:651  INFO 38716 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [0ca592bb-7633-4e75-a09b-69317419d745_config-0] Try to reconnect to a new server, server is  not appointed, will choose a random server.
-00:06:54:653  INFO 38716 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [a2abc2d6-a243-4afa-b58a-e9c38ac8c4c1] Notify disconnected event to listeners
-00:06:54:653  INFO 38716 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [0ca592bb-7633-4e75-a09b-69317419d745_config-0] Notify disconnected event to listeners
-00:06:54:657  INFO 38716 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [0ca592bb-7633-4e75-a09b-69317419d745_config-0] Notify connected event to listeners.
-00:06:54:701  INFO 38716 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [a2abc2d6-a243-4afa-b58a-e9c38ac8c4c1] Notify connected event to listeners.
-00:06:54:814  INFO 38716 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [0ca592bb-7633-4e75-a09b-69317419d745_config-0] Success to connect a server [192.168.230.130:8848], connectionId = 1741100302886_192.168.230.1_60063
-00:06:54:814  INFO 38716 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [0ca592bb-7633-4e75-a09b-69317419d745_config-0] Abandon prev connection, server is 192.168.230.130:8848, connectionId is 1741100302594_192.168.230.1_60060
-00:06:54:815  INFO 38716 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : Close current connection 1741100302594_192.168.230.1_60060
-00:06:54:829  INFO 38716 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [0ca592bb-7633-4e75-a09b-69317419d745_config-0] Notify disconnected event to listeners
-00:06:54:829  INFO 38716 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [0ca592bb-7633-4e75-a09b-69317419d745_config-0] Notify connected event to listeners.
-00:06:54:828  INFO 38716 --- [nacos-grpc-client-executor-1892] c.a.n.c.remote.client.grpc.GrpcClient    : [1741100302594_192.168.230.1_60060]Ignore complete event,isRunning:true,isAbandon=true
-00:06:56:594  INFO 38716 --- [nacos-grpc-client-executor-1907] com.alibaba.nacos.common.remote.client   : [a2abc2d6-a243-4afa-b58a-e9c38ac8c4c1] Receive server push request, request = NotifySubscriberRequest, requestId = 12
-00:06:56:594  INFO 38716 --- [nacos-grpc-client-executor-1907] com.alibaba.nacos.common.remote.client   : [a2abc2d6-a243-4afa-b58a-e9c38ac8c4c1] Ack server push request, request = NotifySubscriberRequest, requestId = 12
-00:06:56:993  INFO 38716 --- [nacos-grpc-client-executor-1908] com.alibaba.nacos.common.remote.client   : [a2abc2d6-a243-4afa-b58a-e9c38ac8c4c1] Receive server push request, request = NotifySubscriberRequest, requestId = 14
-00:06:56:994  INFO 38716 --- [nacos-grpc-client-executor-1908] com.alibaba.nacos.common.remote.client   : [a2abc2d6-a243-4afa-b58a-e9c38ac8c4c1] Ack server push request, request = NotifySubscriberRequest, requestId = 14
-00:25:31:453  WARN 38716 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
-00:25:31:455  WARN 38716 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
-00:25:31:456  WARN 38716 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
-00:25:31:459  WARN 38716 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
-00:25:31:630  INFO 38716 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
-00:25:31:632  INFO 38716 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
-00:25:31:817  INFO 38716 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
-00:25:32:368  INFO 38716 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
-00:25:32:744  INFO 38716 --- [nacos-grpc-client-executor-2155] com.alibaba.nacos.common.remote.client   : [a2abc2d6-a243-4afa-b58a-e9c38ac8c4c1] Receive server push request, request = NotifySubscriberRequest, requestId = 15
-00:25:32:748  INFO 38716 --- [nacos-grpc-client-executor-2155] com.alibaba.nacos.common.remote.client   : [a2abc2d6-a243-4afa-b58a-e9c38ac8c4c1] Ack server push request, request = NotifySubscriberRequest, requestId = 15
-00:25:32:937  INFO 38716 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
-00:25:32:941  INFO 38716 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
-00:25:33:279  INFO 38716 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown rpc client, set status to shutdown
-00:25:33:279  INFO 38716 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@8344a37[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
-00:25:33:279  INFO 38716 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Close current connection 1741100302627_192.168.230.1_60061
-00:25:33:280  INFO 38716 --- [SpringApplicationShutdownHook] c.a.n.c.remote.client.grpc.GrpcClient    : Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@4e018c4c[Running, pool size = 5, active threads = 0, queued tasks = 0, completed tasks = 2158]
-00:25:33:302  INFO 38716 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
-00:25:33:302  INFO 38716 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+00:00:02:640  INFO 31800 --- [http-nio-8078-exec-9] c.h.search.controller.SearchController   : 共搜索到10000条数据，总页数500
+00:00:26:491  INFO 31800 --- [http-nio-8078-exec-10] c.h.search.controller.SearchController   : 共搜索到1215条数据，总页数61
+00:00:34:100  INFO 31800 --- [http-nio-8078-exec-1] c.h.search.controller.SearchController   : 共搜索到0条数据，总页数0
+00:00:36:969  INFO 31800 --- [http-nio-8078-exec-2] c.h.search.controller.SearchController   : 共搜索到1215条数据，总页数61
+00:00:37:814  INFO 31800 --- [http-nio-8078-exec-6] c.h.search.controller.SearchController   : 共搜索到10000条数据，总页数500
+00:00:39:035  INFO 31800 --- [http-nio-8078-exec-8] c.h.search.controller.SearchController   : 共搜索到74条数据，总页数4
+00:10:08:942  INFO 31800 --- [http-nio-8078-exec-3] c.h.search.controller.SearchController   : 共搜索到10000条数据，总页数500
+00:10:49:085  INFO 31800 --- [http-nio-8078-exec-7] c.h.search.controller.SearchController   : 共搜索到10000条数据，总页数500
+00:10:58:649  INFO 31800 --- [http-nio-8078-exec-4] c.h.search.controller.SearchController   : 共搜索到10000条数据，总页数500
+00:11:11:514  INFO 31800 --- [http-nio-8078-exec-9] c.h.search.controller.SearchController   : 共搜索到10000条数据，总页数500
+00:11:13:846  INFO 31800 --- [http-nio-8078-exec-10] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:11:29:689  INFO 31800 --- [http-nio-8078-exec-2] c.h.search.controller.SearchController   : 共搜索到10000条数据，总页数500
+00:11:31:670  INFO 31800 --- [http-nio-8078-exec-6] c.h.search.controller.SearchController   : 共搜索到10000条数据，总页数500
+00:11:42:703  INFO 31800 --- [http-nio-8078-exec-3] c.h.search.controller.SearchController   : 共搜索到10000条数据，总页数500
+00:11:47:501  INFO 31800 --- [http-nio-8078-exec-4] c.h.search.controller.SearchController   : 共搜索到10000条数据，总页数500
+00:13:47:512  INFO 31800 --- [http-nio-8078-exec-1] c.h.search.controller.SearchController   : 共搜索到10000条数据，总页数500
+00:13:49:269  INFO 31800 --- [http-nio-8078-exec-8] c.h.search.controller.SearchController   : 共搜索到10000条数据，总页数500
+00:13:52:659  INFO 31800 --- [http-nio-8078-exec-3] c.h.search.controller.SearchController   : 共搜索到10000条数据，总页数500
+00:14:03:594  INFO 31800 --- [http-nio-8078-exec-4] c.h.search.controller.SearchController   : 共搜索到10000条数据，总页数500
+00:20:33:065  INFO 31800 --- [http-nio-8078-exec-1] c.h.search.controller.SearchController   : 共搜索到0条数据，总页数0
+00:20:33:976  INFO 31800 --- [http-nio-8078-exec-8] c.h.search.controller.SearchController   : 共搜索到10000条数据，总页数500
+00:20:34:646  INFO 31800 --- [http-nio-8078-exec-3] c.h.search.controller.SearchController   : 共搜索到10000条数据，总页数500
+00:20:36:373  INFO 31800 --- [http-nio-8078-exec-4] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:20:42:048  INFO 31800 --- [http-nio-8078-exec-9] c.h.search.controller.SearchController   : 共搜索到10000条数据，总页数500
+00:20:51:947  INFO 31800 --- [http-nio-8078-exec-2] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:20:56:157  INFO 31800 --- [http-nio-8078-exec-6] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:20:57:396  INFO 31800 --- [http-nio-8078-exec-8] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:20:57:824  INFO 31800 --- [http-nio-8078-exec-5] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:20:58:017  INFO 31800 --- [http-nio-8078-exec-3] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:20:58:219  INFO 31800 --- [http-nio-8078-exec-7] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:20:58:419  INFO 31800 --- [http-nio-8078-exec-4] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:20:58:607  INFO 31800 --- [http-nio-8078-exec-10] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:20:58:809  INFO 31800 --- [http-nio-8078-exec-9] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:20:59:019  INFO 31800 --- [http-nio-8078-exec-1] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:20:59:207  INFO 31800 --- [http-nio-8078-exec-2] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:20:59:391  INFO 31800 --- [http-nio-8078-exec-6] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:20:59:592  INFO 31800 --- [http-nio-8078-exec-8] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:20:59:803  INFO 31800 --- [http-nio-8078-exec-5] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:20:59:992  INFO 31800 --- [http-nio-8078-exec-3] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:21:00:232  INFO 31800 --- [http-nio-8078-exec-7] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:21:00:438  INFO 31800 --- [http-nio-8078-exec-4] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:21:00:637  INFO 31800 --- [http-nio-8078-exec-10] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:21:03:193  INFO 31800 --- [http-nio-8078-exec-9] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:21:05:557  INFO 31800 --- [http-nio-8078-exec-1] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:21:05:744  INFO 31800 --- [http-nio-8078-exec-2] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:21:05:972  INFO 31800 --- [http-nio-8078-exec-6] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:21:06:152  INFO 31800 --- [http-nio-8078-exec-8] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:21:06:360  INFO 31800 --- [http-nio-8078-exec-5] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:21:06:595  INFO 31800 --- [http-nio-8078-exec-3] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:21:06:819  INFO 31800 --- [http-nio-8078-exec-7] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:21:07:022  INFO 31800 --- [http-nio-8078-exec-4] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:21:07:226  INFO 31800 --- [http-nio-8078-exec-10] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:21:07:432  INFO 31800 --- [http-nio-8078-exec-9] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:21:07:622  INFO 31800 --- [http-nio-8078-exec-1] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:21:07:827  INFO 31800 --- [http-nio-8078-exec-2] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:21:08:055  INFO 31800 --- [http-nio-8078-exec-6] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:21:08:255  INFO 31800 --- [http-nio-8078-exec-8] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:21:08:459  INFO 31800 --- [http-nio-8078-exec-5] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:21:08:710  INFO 31800 --- [http-nio-8078-exec-3] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:21:08:939  INFO 31800 --- [http-nio-8078-exec-7] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:21:09:161  INFO 31800 --- [http-nio-8078-exec-4] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:21:09:357  INFO 31800 --- [http-nio-8078-exec-10] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:21:09:568  INFO 31800 --- [http-nio-8078-exec-9] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:21:09:797  INFO 31800 --- [http-nio-8078-exec-1] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:21:10:031  INFO 31800 --- [http-nio-8078-exec-2] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:21:10:266  INFO 31800 --- [http-nio-8078-exec-6] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:21:10:524  INFO 31800 --- [http-nio-8078-exec-8] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:21:10:759  INFO 31800 --- [http-nio-8078-exec-5] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:21:11:701  INFO 31800 --- [http-nio-8078-exec-3] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:21:12:114  INFO 31800 --- [http-nio-8078-exec-7] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:21:50:387  WARN 31800 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+00:21:50:387  WARN 31800 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+00:21:50:389  WARN 31800 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+00:21:50:391  WARN 31800 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+00:21:50:409  INFO 31800 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+00:21:50:410  INFO 31800 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+00:21:50:604  INFO 31800 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+00:21:50:610  INFO 31800 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+00:21:51:300  INFO 31800 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+00:21:51:306  INFO 31800 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+00:21:51:629  INFO 31800 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown rpc client, set status to shutdown
+00:21:51:629  INFO 31800 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@387a7e4f[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+00:21:51:630  INFO 31800 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Close current connection 1741708109725_192.168.230.1_58111
+00:21:51:633  INFO 31800 --- [nacos-grpc-client-executor-341] c.a.n.c.remote.client.grpc.GrpcClient    : [1741708109725_192.168.230.1_58111]Ignore complete event,isRunning:false,isAbandon=false
+00:21:51:639  INFO 31800 --- [SpringApplicationShutdownHook] c.a.n.c.remote.client.grpc.GrpcClient    : Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@7427e5c9[Running, pool size = 5, active threads = 0, queued tasks = 0, completed tasks = 342]
+00:21:51:647  INFO 31800 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+00:21:51:648  INFO 31800 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+00:22:08:988  INFO 32248 --- [main] com.heima.search.SearchApplication       : The following 1 profile is active: "local"
+00:22:10:324  INFO 32248 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+00:22:10:328  INFO 32248 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+00:22:10:359  INFO 32248 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+00:22:10:610  WARN 32248 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.heima.search]' package. Please check your configuration.
+00:22:10:702  INFO 32248 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f5b4c3cf-9065-37dd-837b-7275cdc82418
+00:22:11:425  INFO 32248 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8078 (http)
+00:22:11:437  INFO 32248 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+00:22:11:438  INFO 32248 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+00:22:11:738  INFO 32248 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+00:22:11:738  INFO 32248 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2734 ms
+00:22:11:867  INFO 32248 --- [main] c.hmall.item.api.config.ItemFeignConfig  : 正在定义Feign的日志级别
+00:22:11:868  INFO 32248 --- [main] c.h.common.config.DefaultFeignConfig     : 正在定义Feign请求拦截器
+00:22:11:869  INFO 32248 --- [main] c.hmall.item.api.config.ItemFeignConfig  : 正在定义ItemClientFallback
+00:22:12:167  INFO 32248 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'item-service' URL not provided. Will try picking an instance via load-balancing.
+00:22:12:542  INFO 32248 --- [main] c.heima.search.config.RestClientConfig   : 正在定义RestHighLevelClient,地址：192.168.230.130:9200,索引库名称:items
+00:22:12:888  INFO 32248 --- [main] c.heima.search.config.RestClientConfig   : 索引库已经存在，先删除原有的索引库
+00:22:12:999  INFO 32248 --- [main] c.heima.search.config.RestClientConfig   : 正在创建索引库
+00:22:13:191  INFO 32248 --- [main] c.heima.search.config.RestClientConfig   : 正在初始化文档
+00:22:15:259  INFO 32248 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 38dbb90c-3222-4161-bb01-ae9f9b0f1cb8
+00:22:15:260  INFO 32248 --- [main] com.alibaba.nacos.common.remote.client   : [38dbb90c-3222-4161-bb01-ae9f9b0f1cb8] RpcClient init label, labels = {module=naming, source=sdk}
+00:22:15:262  INFO 32248 --- [main] com.alibaba.nacos.common.remote.client   : [38dbb90c-3222-4161-bb01-ae9f9b0f1cb8] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+00:22:15:262  INFO 32248 --- [main] com.alibaba.nacos.common.remote.client   : [38dbb90c-3222-4161-bb01-ae9f9b0f1cb8] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+00:22:15:263  INFO 32248 --- [main] com.alibaba.nacos.common.remote.client   : [38dbb90c-3222-4161-bb01-ae9f9b0f1cb8] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+00:22:15:263  INFO 32248 --- [main] com.alibaba.nacos.common.remote.client   : [38dbb90c-3222-4161-bb01-ae9f9b0f1cb8] Try to connect to server on start up, server: {serverIp = '192.168.230.130', server main port = 8848}
+00:22:15:389  INFO 32248 --- [main] com.alibaba.nacos.common.remote.client   : [38dbb90c-3222-4161-bb01-ae9f9b0f1cb8] Success to connect to server [192.168.230.130:8848] on start up, connectionId = 1741709853277_192.168.230.1_63993
+00:22:15:389  INFO 32248 --- [main] com.alibaba.nacos.common.remote.client   : [38dbb90c-3222-4161-bb01-ae9f9b0f1cb8] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+00:22:15:389  INFO 32248 --- [main] com.alibaba.nacos.common.remote.client   : [38dbb90c-3222-4161-bb01-ae9f9b0f1cb8] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$475/0x000000080042e440
+00:22:15:389  INFO 32248 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [38dbb90c-3222-4161-bb01-ae9f9b0f1cb8] Notify connected event to listeners.
+00:22:15:893  INFO 32248 --- [nacos-grpc-client-executor-5] com.alibaba.nacos.common.remote.client   : [38dbb90c-3222-4161-bb01-ae9f9b0f1cb8] Receive server push request, request = NotifySubscriberRequest, requestId = 75
+00:22:15:896  INFO 32248 --- [nacos-grpc-client-executor-5] com.alibaba.nacos.common.remote.client   : [38dbb90c-3222-4161-bb01-ae9f9b0f1cb8] Ack server push request, request = NotifySubscriberRequest, requestId = 75
+00:23:29:378  INFO 32248 --- [main] c.heima.search.config.RestClientConfig   : 初始化文档完成,共90页
+00:23:29:710  INFO 32248 --- [main] c.a.c.sentinel.SentinelWebMvcConfigurer  : [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+00:23:32:538  INFO 32248 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+00:23:32:556  INFO 32248 --- [main] com.hmall.common.config.MqConfig         : 初始化消息转换器.......
+00:23:32:564  INFO 32248 --- [main] com.hmall.common.config.MqConfig         : 初始化消息头信息.......
+00:23:32:566  INFO 32248 --- [main] com.hmall.common.config.MqConfig         : 初始化消息拦截器.....
+00:23:33:650  INFO 32248 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8078 (http) with context path ''
+00:23:34:100  INFO 32248 --- [nacos-grpc-client-executor-23] com.alibaba.nacos.common.remote.client   : [38dbb90c-3222-4161-bb01-ae9f9b0f1cb8] Receive server push request, request = NotifySubscriberRequest, requestId = 76
+00:23:34:101  INFO 32248 --- [nacos-grpc-client-executor-23] com.alibaba.nacos.common.remote.client   : [38dbb90c-3222-4161-bb01-ae9f9b0f1cb8] Ack server push request, request = NotifySubscriberRequest, requestId = 76
+00:23:34:521  INFO 32248 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP search-service 10.96.214.85:8078 register finished
+00:23:34:523  INFO 32248 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+00:23:34:533  INFO 32248 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+00:23:34:576  INFO 32248 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+00:23:34:582  INFO 32248 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [192.168.230.130:5672]
+00:23:34:688  INFO 32248 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#712eb075:0/SimpleConnection@3622c9f0 [delegate=amqp://hmall@192.168.230.130:5672//hmall, localPort= 64366]
+00:23:34:799  INFO 32248 --- [main] com.heima.search.SearchApplication       : Started SearchApplication in 92.08 seconds (JVM running for 94.378)
+00:23:34:807  INFO 32248 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=search-service, group=DEFAULT_GROUP
+00:23:34:808  INFO 32248 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=search-service.yaml, group=DEFAULT_GROUP
+00:23:34:809  INFO 32248 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=search-service-local.yaml, group=DEFAULT_GROUP
+00:23:35:029  INFO 32248 --- [nacos-grpc-client-executor-26] com.alibaba.nacos.common.remote.client   : [38dbb90c-3222-4161-bb01-ae9f9b0f1cb8] Receive server push request, request = NotifySubscriberRequest, requestId = 77
+00:23:35:031  INFO 32248 --- [nacos-grpc-client-executor-26] com.alibaba.nacos.common.remote.client   : [38dbb90c-3222-4161-bb01-ae9f9b0f1cb8] Ack server push request, request = NotifySubscriberRequest, requestId = 77
+00:23:40:041  INFO 32248 --- [http-nio-8078-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+00:23:40:041  INFO 32248 --- [http-nio-8078-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+00:23:40:044  INFO 32248 --- [http-nio-8078-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+00:23:41:766  INFO 32248 --- [http-nio-8078-exec-1] c.h.search.controller.SearchController   : 共搜索到10000条数据，总页数500
+00:23:43:099  INFO 32248 --- [http-nio-8078-exec-4] c.h.search.controller.SearchController   : 共搜索到10000条数据，总页数500
+00:23:45:259  INFO 32248 --- [http-nio-8078-exec-7] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:23:47:956  INFO 32248 --- [http-nio-8078-exec-5] c.h.search.controller.SearchController   : 共搜索到0条数据，总页数0
+00:23:49:737  INFO 32248 --- [http-nio-8078-exec-2] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:23:57:877  INFO 32248 --- [http-nio-8078-exec-3] c.h.search.controller.SearchController   : 共搜索到10000条数据，总页数500
+00:23:58:215  INFO 32248 --- [http-nio-8078-exec-9] c.h.search.controller.SearchController   : 共搜索到10000条数据，总页数500
+00:24:57:476  INFO 32248 --- [http-nio-8078-exec-10] c.h.search.controller.SearchController   : 共搜索到10000条数据，总页数500
+00:26:36:941  WARN 32248 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+00:26:36:941  WARN 32248 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+00:26:36:942  WARN 32248 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+00:26:36:944  WARN 32248 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+00:26:36:961  INFO 32248 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+00:26:36:962  INFO 32248 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+00:26:37:152  INFO 32248 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+00:26:37:153  INFO 32248 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+00:26:37:899  INFO 32248 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+00:26:37:904  INFO 32248 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+00:26:38:235  INFO 32248 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown rpc client, set status to shutdown
+00:26:38:236  INFO 32248 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@2baaef59[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+00:26:38:236  INFO 32248 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Close current connection 1741709853277_192.168.230.1_63993
+00:26:38:249  INFO 32248 --- [nacos-grpc-client-executor-66] c.a.n.c.remote.client.grpc.GrpcClient    : [1741709853277_192.168.230.1_63993]Ignore complete event,isRunning:false,isAbandon=false
+00:26:38:261  INFO 32248 --- [SpringApplicationShutdownHook] c.a.n.c.remote.client.grpc.GrpcClient    : Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@6393aec8[Running, pool size = 5, active threads = 0, queued tasks = 0, completed tasks = 67]
+00:26:38:271  INFO 32248 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+00:26:38:271  INFO 32248 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+00:26:51:109  INFO 27940 --- [main] com.heima.search.SearchApplication       : The following 1 profile is active: "local"
+00:26:52:248  INFO 27940 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+00:26:52:252  INFO 27940 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+00:26:52:280  INFO 27940 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+00:26:52:475  WARN 27940 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.heima.search]' package. Please check your configuration.
+00:26:52:558  INFO 27940 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f5b4c3cf-9065-37dd-837b-7275cdc82418
+00:26:53:302  INFO 27940 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8078 (http)
+00:26:53:315  INFO 27940 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+00:26:53:316  INFO 27940 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+00:26:53:583  INFO 27940 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+00:26:53:583  INFO 27940 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2459 ms
+00:26:53:691  INFO 27940 --- [main] c.hmall.item.api.config.ItemFeignConfig  : 正在定义Feign的日志级别
+00:26:53:692  INFO 27940 --- [main] c.h.common.config.DefaultFeignConfig     : 正在定义Feign请求拦截器
+00:26:53:694  INFO 27940 --- [main] c.hmall.item.api.config.ItemFeignConfig  : 正在定义ItemClientFallback
+00:26:53:921  INFO 27940 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'item-service' URL not provided. Will try picking an instance via load-balancing.
+00:26:54:304  INFO 27940 --- [main] c.heima.search.config.RestClientConfig   : 正在定义RestHighLevelClient,地址：192.168.230.130:9200,索引库名称:items
+00:26:54:617  INFO 27940 --- [main] c.heima.search.config.RestClientConfig   : 索引库已经存在，先删除原有的索引库
+00:26:54:694  INFO 27940 --- [main] c.heima.search.config.RestClientConfig   : 正在创建索引库
+00:26:54:869  INFO 27940 --- [main] c.heima.search.config.RestClientConfig   : 正在初始化文档
+00:26:56:864  INFO 27940 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 32f9b6d0-ec7d-44b7-827b-a1f9f00eed83
+00:26:56:865  INFO 27940 --- [main] com.alibaba.nacos.common.remote.client   : [32f9b6d0-ec7d-44b7-827b-a1f9f00eed83] RpcClient init label, labels = {module=naming, source=sdk}
+00:26:56:867  INFO 27940 --- [main] com.alibaba.nacos.common.remote.client   : [32f9b6d0-ec7d-44b7-827b-a1f9f00eed83] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+00:26:56:867  INFO 27940 --- [main] com.alibaba.nacos.common.remote.client   : [32f9b6d0-ec7d-44b7-827b-a1f9f00eed83] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+00:26:56:867  INFO 27940 --- [main] com.alibaba.nacos.common.remote.client   : [32f9b6d0-ec7d-44b7-827b-a1f9f00eed83] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+00:26:56:868  INFO 27940 --- [main] com.alibaba.nacos.common.remote.client   : [32f9b6d0-ec7d-44b7-827b-a1f9f00eed83] Try to connect to server on start up, server: {serverIp = '192.168.230.130', server main port = 8848}
+00:26:56:995  INFO 27940 --- [main] com.alibaba.nacos.common.remote.client   : [32f9b6d0-ec7d-44b7-827b-a1f9f00eed83] Success to connect to server [192.168.230.130:8848] on start up, connectionId = 1741710158351_192.168.230.1_65306
+00:26:56:995  INFO 27940 --- [main] com.alibaba.nacos.common.remote.client   : [32f9b6d0-ec7d-44b7-827b-a1f9f00eed83] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+00:26:56:995  INFO 27940 --- [main] com.alibaba.nacos.common.remote.client   : [32f9b6d0-ec7d-44b7-827b-a1f9f00eed83] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$475/0x000000080042e440
+00:26:56:995  INFO 27940 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [32f9b6d0-ec7d-44b7-827b-a1f9f00eed83] Notify connected event to listeners.
+00:26:57:552  INFO 27940 --- [nacos-grpc-client-executor-7] com.alibaba.nacos.common.remote.client   : [32f9b6d0-ec7d-44b7-827b-a1f9f00eed83] Receive server push request, request = NotifySubscriberRequest, requestId = 80
+00:26:57:563  INFO 27940 --- [nacos-grpc-client-executor-7] com.alibaba.nacos.common.remote.client   : [32f9b6d0-ec7d-44b7-827b-a1f9f00eed83] Ack server push request, request = NotifySubscriberRequest, requestId = 80
+00:28:06:317  INFO 27940 --- [main] c.heima.search.config.RestClientConfig   : 初始化文档完成,共90页
+00:28:06:663  INFO 27940 --- [main] c.a.c.sentinel.SentinelWebMvcConfigurer  : [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+00:28:08:940  INFO 27940 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+00:28:08:980  INFO 27940 --- [main] com.hmall.common.config.MqConfig         : 初始化消息转换器.......
+00:28:08:993  INFO 27940 --- [main] com.hmall.common.config.MqConfig         : 初始化消息头信息.......
+00:28:08:998  INFO 27940 --- [main] com.hmall.common.config.MqConfig         : 初始化消息拦截器.....
+00:28:09:877  INFO 27940 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8078 (http) with context path ''
+00:28:10:381  INFO 27940 --- [nacos-grpc-client-executor-24] com.alibaba.nacos.common.remote.client   : [32f9b6d0-ec7d-44b7-827b-a1f9f00eed83] Receive server push request, request = NotifySubscriberRequest, requestId = 81
+00:28:10:383  INFO 27940 --- [nacos-grpc-client-executor-24] com.alibaba.nacos.common.remote.client   : [32f9b6d0-ec7d-44b7-827b-a1f9f00eed83] Ack server push request, request = NotifySubscriberRequest, requestId = 81
+00:28:10:712  INFO 27940 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP search-service 10.96.214.85:8078 register finished
+00:28:10:713  INFO 27940 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+00:28:10:717  INFO 27940 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+00:28:10:737  INFO 27940 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+00:28:10:742  INFO 27940 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [192.168.230.130:5672]
+00:28:10:783  INFO 27940 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#77a13162:0/SimpleConnection@7d911f95 [delegate=amqp://hmall@192.168.230.130:5672//hmall, localPort= 65532]
+00:28:10:853  INFO 27940 --- [main] com.heima.search.SearchApplication       : Started SearchApplication in 85.122 seconds (JVM running for 87.254)
+00:28:10:859  INFO 27940 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=search-service, group=DEFAULT_GROUP
+00:28:10:860  INFO 27940 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=search-service.yaml, group=DEFAULT_GROUP
+00:28:10:861  INFO 27940 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=search-service-local.yaml, group=DEFAULT_GROUP
+00:28:11:220  INFO 27940 --- [nacos-grpc-client-executor-27] com.alibaba.nacos.common.remote.client   : [32f9b6d0-ec7d-44b7-827b-a1f9f00eed83] Receive server push request, request = NotifySubscriberRequest, requestId = 83
+00:28:11:223  INFO 27940 --- [nacos-grpc-client-executor-27] com.alibaba.nacos.common.remote.client   : [32f9b6d0-ec7d-44b7-827b-a1f9f00eed83] Ack server push request, request = NotifySubscriberRequest, requestId = 83
+00:28:23:267  INFO 27940 --- [http-nio-8078-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+00:28:23:268  INFO 27940 --- [http-nio-8078-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+00:28:23:270  INFO 27940 --- [http-nio-8078-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+00:28:25:016  INFO 27940 --- [http-nio-8078-exec-1] c.h.search.controller.SearchController   : 共搜索到10000条数据，总页数500
+00:28:26:382  INFO 27940 --- [http-nio-8078-exec-2] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:28:38:217  INFO 27940 --- [http-nio-8078-exec-4] c.h.search.controller.SearchController   : 商品的品牌信息：null
+00:28:38:217  INFO 27940 --- [http-nio-8078-exec-4] c.h.search.controller.SearchController   : 商品的分类信息：null
+00:28:38:217  INFO 27940 --- [http-nio-8078-exec-4] c.h.search.controller.SearchController   : 商品的关键字段：null
+00:28:38:217  INFO 27940 --- [http-nio-8078-exec-5] c.h.search.controller.SearchController   : 共搜索到10000条数据，总页数500
+00:28:48:561  INFO 27940 --- [http-nio-8078-exec-3] c.h.search.controller.SearchController   : 商品的品牌信息：null
+00:28:48:561  INFO 27940 --- [http-nio-8078-exec-3] c.h.search.controller.SearchController   : 商品的分类信息：null
+00:28:48:561  INFO 27940 --- [http-nio-8078-exec-3] c.h.search.controller.SearchController   : 商品的关键字段：null
+00:28:48:584  INFO 27940 --- [http-nio-8078-exec-6] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:29:16:157  INFO 27940 --- [http-nio-8078-exec-7] c.h.search.controller.SearchController   : 商品的品牌信息：null
+00:29:16:158  INFO 27940 --- [http-nio-8078-exec-7] c.h.search.controller.SearchController   : 商品的分类信息：null
+00:29:16:158  INFO 27940 --- [http-nio-8078-exec-7] c.h.search.controller.SearchController   : 商品的关键字段：null
+00:29:16:163  INFO 27940 --- [http-nio-8078-exec-8] c.h.search.controller.SearchController   : 共搜索到10000条数据，总页数500
+00:29:17:269  INFO 27940 --- [http-nio-8078-exec-10] c.h.search.controller.SearchController   : 商品的品牌信息：null
+00:29:17:270  INFO 27940 --- [http-nio-8078-exec-10] c.h.search.controller.SearchController   : 商品的分类信息：null
+00:29:17:270  INFO 27940 --- [http-nio-8078-exec-10] c.h.search.controller.SearchController   : 商品的关键字段：null
+00:29:17:275  INFO 27940 --- [http-nio-8078-exec-9] c.h.search.controller.SearchController   : 共搜索到10000条数据，总页数500
+00:30:02:373  WARN 27940 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+00:30:02:373  WARN 27940 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+00:30:02:375  WARN 27940 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+00:30:02:375  WARN 27940 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+00:30:02:387  INFO 27940 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+00:30:02:389  INFO 27940 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+00:30:02:692  INFO 27940 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+00:30:02:692  INFO 27940 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+00:30:03:301  INFO 27940 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+00:30:03:324  INFO 27940 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+00:30:03:650  INFO 27940 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown rpc client, set status to shutdown
+00:30:03:650  INFO 27940 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@2d0df853[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+00:30:03:651  INFO 27940 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Close current connection 1741710158351_192.168.230.1_65306
+00:30:03:658  INFO 27940 --- [SpringApplicationShutdownHook] c.a.n.c.remote.client.grpc.GrpcClient    : Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@1c006480[Running, pool size = 4, active threads = 0, queued tasks = 0, completed tasks = 54]
+00:30:03:671  INFO 27940 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+00:30:03:671  INFO 27940 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+00:30:16:290  INFO 1612 --- [main] com.heima.search.SearchApplication       : The following 1 profile is active: "local"
+00:30:17:477  INFO 1612 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+00:30:17:489  INFO 1612 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+00:30:17:583  INFO 1612 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
+00:30:17:815  WARN 1612 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.heima.search]' package. Please check your configuration.
+00:30:17:909  INFO 1612 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f5b4c3cf-9065-37dd-837b-7275cdc82418
+00:30:18:451  INFO 1612 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8078 (http)
+00:30:18:461  INFO 1612 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+00:30:18:461  INFO 1612 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+00:30:18:873  INFO 1612 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+00:30:18:873  INFO 1612 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2550 ms
+00:30:19:009  INFO 1612 --- [main] c.hmall.item.api.config.ItemFeignConfig  : 正在定义Feign的日志级别
+00:30:19:010  INFO 1612 --- [main] c.h.common.config.DefaultFeignConfig     : 正在定义Feign请求拦截器
+00:30:19:011  INFO 1612 --- [main] c.hmall.item.api.config.ItemFeignConfig  : 正在定义ItemClientFallback
+00:30:19:238  INFO 1612 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'item-service' URL not provided. Will try picking an instance via load-balancing.
+00:30:19:480  INFO 1612 --- [main] c.heima.search.config.RestClientConfig   : 正在定义RestHighLevelClient,地址：192.168.230.130:9200,索引库名称:items
+00:30:19:781  INFO 1612 --- [main] c.heima.search.config.RestClientConfig   : 索引库已经存在，先删除原有的索引库
+00:30:19:983  INFO 1612 --- [main] c.heima.search.config.RestClientConfig   : 正在创建索引库
+00:30:20:202  INFO 1612 --- [main] c.heima.search.config.RestClientConfig   : 正在初始化文档
+00:30:22:074  INFO 1612 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of f8bc8c6b-3256-4aee-99d8-1116a1d302bb
+00:30:22:075  INFO 1612 --- [main] com.alibaba.nacos.common.remote.client   : [f8bc8c6b-3256-4aee-99d8-1116a1d302bb] RpcClient init label, labels = {module=naming, source=sdk}
+00:30:22:079  INFO 1612 --- [main] com.alibaba.nacos.common.remote.client   : [f8bc8c6b-3256-4aee-99d8-1116a1d302bb] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+00:30:22:080  INFO 1612 --- [main] com.alibaba.nacos.common.remote.client   : [f8bc8c6b-3256-4aee-99d8-1116a1d302bb] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+00:30:22:081  INFO 1612 --- [main] com.alibaba.nacos.common.remote.client   : [f8bc8c6b-3256-4aee-99d8-1116a1d302bb] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+00:30:22:082  INFO 1612 --- [main] com.alibaba.nacos.common.remote.client   : [f8bc8c6b-3256-4aee-99d8-1116a1d302bb] Try to connect to server on start up, server: {serverIp = '192.168.230.130', server main port = 8848}
+00:30:22:232  INFO 1612 --- [main] com.alibaba.nacos.common.remote.client   : [f8bc8c6b-3256-4aee-99d8-1116a1d302bb] Success to connect to server [192.168.230.130:8848] on start up, connectionId = 1741710380689_192.168.230.1_50038
+00:30:22:232  INFO 1612 --- [main] com.alibaba.nacos.common.remote.client   : [f8bc8c6b-3256-4aee-99d8-1116a1d302bb] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+00:30:22:232  INFO 1612 --- [main] com.alibaba.nacos.common.remote.client   : [f8bc8c6b-3256-4aee-99d8-1116a1d302bb] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$475/0x000000080042e440
+00:30:22:232  INFO 1612 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [f8bc8c6b-3256-4aee-99d8-1116a1d302bb] Notify connected event to listeners.
+00:30:22:793  INFO 1612 --- [nacos-grpc-client-executor-5] com.alibaba.nacos.common.remote.client   : [f8bc8c6b-3256-4aee-99d8-1116a1d302bb] Receive server push request, request = NotifySubscriberRequest, requestId = 85
+00:30:22:794  INFO 1612 --- [nacos-grpc-client-executor-5] com.alibaba.nacos.common.remote.client   : [f8bc8c6b-3256-4aee-99d8-1116a1d302bb] Ack server push request, request = NotifySubscriberRequest, requestId = 85
+00:31:27:503  INFO 1612 --- [nacos-grpc-client-executor-25] com.alibaba.nacos.common.remote.client   : [10ed509a-e1f5-4115-ba3e-661ce3770390_config-0] Receive server push request, request = ClientDetectionRequest, requestId = 86
+00:31:27:504  INFO 1612 --- [nacos-grpc-client-executor-25] com.alibaba.nacos.common.remote.client   : [10ed509a-e1f5-4115-ba3e-661ce3770390_config-0] Ack server push request, request = ClientDetectionRequest, requestId = 86
+00:31:27:748  INFO 1612 --- [nacos-grpc-client-executor-14] com.alibaba.nacos.common.remote.client   : [f8bc8c6b-3256-4aee-99d8-1116a1d302bb] Receive server push request, request = ClientDetectionRequest, requestId = 93
+00:31:27:749  INFO 1612 --- [nacos-grpc-client-executor-14] com.alibaba.nacos.common.remote.client   : [f8bc8c6b-3256-4aee-99d8-1116a1d302bb] Ack server push request, request = ClientDetectionRequest, requestId = 93
+00:31:49:505  WARN 1612 --- [main] .c.RetryAwareServiceInstanceListSupplier : No instances found after removing previously used service instance from the search (com.alibaba.cloud.nacos.NacosServiceInstance@1f). Returning all found instances.
+00:31:49:535 ERROR 1612 --- [main] c.h.i.api.fallback.ItemClientFallback    : 远程调用ItemClient#queryItemByPageToEs方法出现异常，参数：PageQuery(pageNo=79, pageSize=1000, isAsc=true, sortBy=null)
+
+feign.RetryableException: Network is unreachable: connect executing GET http://item-service/items/page/es?pageNo=79&pageSize=1000&isAsc=true
+	at feign.FeignException.errorExecuting(FeignException.java:268) ~[feign-core-11.8.jar:na]
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:129) ~[feign-core-11.8.jar:na]
+	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:89) ~[feign-core-11.8.jar:na]
+	at com.alibaba.cloud.sentinel.feign.SentinelInvocationHandler.invoke(SentinelInvocationHandler.java:109) ~[spring-cloud-starter-alibaba-sentinel-2021.0.4.0.jar:2021.0.4.0]
+	at com.sun.proxy.$Proxy125.queryItemByPageToEs(Unknown Source) ~[na:na]
+	at com.heima.search.config.RestClientConfig.InitDocument(RestClientConfig.java:87) ~[classes/:na]
+	at com.heima.search.config.RestClientConfig.restHighLevelClient(RestClientConfig.java:53) ~[classes/:na]
+	at com.heima.search.config.RestClientConfig$$EnhancerBySpringCGLIB$$5cf2015f.CGLIB$restHighLevelClient$0(<generated>) ~[classes/:na]
+	at com.heima.search.config.RestClientConfig$$EnhancerBySpringCGLIB$$5cf2015f$$FastClassBySpringCGLIB$$b3d829a3.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.3.27.jar:5.3.27]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.3.27.jar:5.3.27]
+	at com.heima.search.config.RestClientConfig$$EnhancerBySpringCGLIB$$5cf2015f.restHighLevelClient(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.12.jar:2.7.12]
+	at com.heima.search.SearchApplication.main(SearchApplication.java:14) ~[classes/:na]
+Caused by: java.net.SocketException: Network is unreachable: connect
+	at java.base/java.net.PlainSocketImpl.waitForConnect(Native Method) ~[na:na]
+	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:107) ~[na:na]
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:412) ~[na:na]
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:255) ~[na:na]
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:237) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:608) ~[na:na]
+	at okhttp3.internal.platform.Platform.connectSocket(Platform.kt:128) ~[okhttp-4.9.3.jar:na]
+	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.kt:295) ~[okhttp-4.9.3.jar:na]
+	at okhttp3.internal.connection.RealConnection.connect(RealConnection.kt:207) ~[okhttp-4.9.3.jar:na]
+	at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.kt:226) ~[okhttp-4.9.3.jar:na]
+	at okhttp3.internal.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.kt:106) ~[okhttp-4.9.3.jar:na]
+	at okhttp3.internal.connection.ExchangeFinder.find(ExchangeFinder.kt:74) ~[okhttp-4.9.3.jar:na]
+	at okhttp3.internal.connection.RealCall.initExchange$okhttp(RealCall.kt:255) ~[okhttp-4.9.3.jar:na]
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:32) ~[okhttp-4.9.3.jar:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.9.3.jar:na]
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:95) ~[okhttp-4.9.3.jar:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.9.3.jar:na]
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:83) ~[okhttp-4.9.3.jar:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.9.3.jar:na]
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:76) ~[okhttp-4.9.3.jar:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.9.3.jar:na]
+	at okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp(RealCall.kt:201) ~[okhttp-4.9.3.jar:na]
+	at okhttp3.internal.connection.RealCall.execute(RealCall.kt:154) ~[okhttp-4.9.3.jar:na]
+	at feign.okhttp.OkHttpClient.execute(OkHttpClient.java:172) ~[feign-okhttp-11.8.jar:na]
+	at org.springframework.cloud.openfeign.loadbalancer.LoadBalancerUtils.executeWithLoadBalancerLifecycleProcessing(LoadBalancerUtils.java:57) ~[spring-cloud-openfeign-core-3.1.3.jar:3.1.3]
+	at org.springframework.cloud.openfeign.loadbalancer.RetryableFeignBlockingLoadBalancerClient.lambda$execute$2(RetryableFeignBlockingLoadBalancerClient.java:167) ~[spring-cloud-openfeign-core-3.1.3.jar:3.1.3]
+	at org.springframework.retry.support.RetryTemplate.doExecute(RetryTemplate.java:329) ~[spring-retry-1.3.4.jar:na]
+	at org.springframework.retry.support.RetryTemplate.execute(RetryTemplate.java:225) ~[spring-retry-1.3.4.jar:na]
+	at org.springframework.cloud.openfeign.loadbalancer.RetryableFeignBlockingLoadBalancerClient.execute(RetryableFeignBlockingLoadBalancerClient.java:113) ~[spring-cloud-openfeign-core-3.1.3.jar:3.1.3]
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:119) ~[feign-core-11.8.jar:na]
+	... 49 common frames omitted
+
+00:31:49:553  WARN 1612 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'searchController' defined in file [D:\SpringCloud\hmall\search-service\target\classes\com\heima\search\controller\SearchController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'restHighLevelClient' defined in class path resource [com/heima/search/config/RestClientConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.elasticsearch.client.RestHighLevelClient]: Factory method 'restHighLevelClient' threw exception; nested exception is java.lang.NullPointerException
+00:31:49:558  WARN 1612 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception thrown from ApplicationListener handling ContextClosedEvent
+
+org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'rabbitConnectionFactory': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:220) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.retrieveApplicationListeners(AbstractApplicationEventMulticaster.java:264) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.getApplicationListeners(AbstractApplicationEventMulticaster.java:221) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:427) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1060) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1023) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:99) ~[spring-cloud-context-3.1.3.jar:3.1.3]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:213) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1163) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1156) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1108) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:596) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.12.jar:2.7.12]
+	at com.heima.search.SearchApplication.main(SearchApplication.java:14) ~[classes/:na]
+
+00:31:49:564  WARN 1612 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception thrown from ApplicationListener handling ContextClosedEvent
+
+org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'rabbitConnectionFactory': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:220) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.retrieveApplicationListeners(AbstractApplicationEventMulticaster.java:264) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.getApplicationListeners(AbstractApplicationEventMulticaster.java:221) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:427) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1060) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1023) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:99) ~[spring-cloud-context-3.1.3.jar:3.1.3]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:213) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1163) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1156) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1108) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:596) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.12.jar:2.7.12]
+	at com.heima.search.SearchApplication.main(SearchApplication.java:14) ~[classes/:na]
+
+00:31:49:567  INFO 1612 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+00:31:49:612  INFO 1612 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+00:31:49:698 ERROR 1612 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'searchController' defined in file [D:\SpringCloud\hmall\search-service\target\classes\com\heima\search\controller\SearchController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'restHighLevelClient' defined in class path resource [com/heima/search/config/RestClientConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.elasticsearch.client.RestHighLevelClient]: Factory method 'restHighLevelClient' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.12.jar:2.7.12]
+	at com.heima.search.SearchApplication.main(SearchApplication.java:14) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'restHighLevelClient' defined in class path resource [com/heima/search/config/RestClientConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.elasticsearch.client.RestHighLevelClient]: Factory method 'restHighLevelClient' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.27.jar:5.3.27]
+	... 19 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.elasticsearch.client.RestHighLevelClient]: Factory method 'restHighLevelClient' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.27.jar:5.3.27]
+	... 33 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at com.heima.search.config.RestClientConfig.InitDocument(RestClientConfig.java:88) ~[classes/:na]
+	at com.heima.search.config.RestClientConfig.restHighLevelClient(RestClientConfig.java:53) ~[classes/:na]
+	at com.heima.search.config.RestClientConfig$$EnhancerBySpringCGLIB$$5cf2015f.CGLIB$restHighLevelClient$0(<generated>) ~[classes/:na]
+	at com.heima.search.config.RestClientConfig$$EnhancerBySpringCGLIB$$5cf2015f$$FastClassBySpringCGLIB$$b3d829a3.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.3.27.jar:5.3.27]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.3.27.jar:5.3.27]
+	at com.heima.search.config.RestClientConfig$$EnhancerBySpringCGLIB$$5cf2015f.restHighLevelClient(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.27.jar:5.3.27]
+	... 34 common frames omitted
+
+00:31:53:807  INFO 1612 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [10ed509a-e1f5-4115-ba3e-661ce3770390_config-0] Server healthy check fail, currentConnection = 1741710373937_192.168.230.1_49988
+00:31:53:809  INFO 1612 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [10ed509a-e1f5-4115-ba3e-661ce3770390_config-0] Try to reconnect to a new server, server is  not appointed, will choose a random server.
+00:31:56:493  INFO 1612 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [10ed509a-e1f5-4115-ba3e-661ce3770390_config-0] Success to connect a server [192.168.230.130:8848], connectionId = 1741710482587_192.168.230.1_51514
+00:31:56:494  INFO 1612 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [10ed509a-e1f5-4115-ba3e-661ce3770390_config-0] Abandon prev connection, server is 192.168.230.130:8848, connectionId is 1741710373937_192.168.230.1_49988
+00:31:56:494  INFO 1612 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : Close current connection 1741710373937_192.168.230.1_49988
+00:31:56:508  INFO 1612 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [10ed509a-e1f5-4115-ba3e-661ce3770390_config-0] Notify disconnected event to listeners
+00:31:56:509  INFO 1612 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [10ed509a-e1f5-4115-ba3e-661ce3770390_config-0] Notify connected event to listeners.
+00:31:56:512  WARN 1612 --- [nacos-grpc-client-executor-33] c.a.n.c.remote.client.grpc.GrpcClient    : [1741710373937_192.168.230.1_49988]Ignore error event,isRunning:true,isAbandon=true
+00:32:03:429  INFO 1612 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [f8bc8c6b-3256-4aee-99d8-1116a1d302bb] Server healthy check fail, currentConnection = 1741710380689_192.168.230.1_50038
+00:32:03:429  INFO 1612 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [f8bc8c6b-3256-4aee-99d8-1116a1d302bb] Try to reconnect to a new server, server is  not appointed, will choose a random server.
+00:32:03:567  INFO 1612 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [f8bc8c6b-3256-4aee-99d8-1116a1d302bb] Success to connect a server [192.168.230.130:8848], connectionId = 1741710490472_192.168.230.1_51982
+00:32:03:567  INFO 1612 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [f8bc8c6b-3256-4aee-99d8-1116a1d302bb] Abandon prev connection, server is 192.168.230.130:8848, connectionId is 1741710380689_192.168.230.1_50038
+00:32:03:567  INFO 1612 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : Close current connection 1741710380689_192.168.230.1_50038
+00:32:03:568  INFO 1612 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [f8bc8c6b-3256-4aee-99d8-1116a1d302bb] Notify disconnected event to listeners
+00:32:03:570  WARN 1612 --- [nacos-grpc-client-executor-24] c.a.n.c.remote.client.grpc.GrpcClient    : [1741710380689_192.168.230.1_50038]Ignore error event,isRunning:true,isAbandon=true
+00:32:03:572  INFO 1612 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [f8bc8c6b-3256-4aee-99d8-1116a1d302bb] Notify connected event to listeners.
+00:32:05:858  INFO 1612 --- [nacos-grpc-client-executor-28] com.alibaba.nacos.common.remote.client   : [f8bc8c6b-3256-4aee-99d8-1116a1d302bb] Receive server push request, request = NotifySubscriberRequest, requestId = 121
+00:32:05:858  INFO 1612 --- [nacos-grpc-client-executor-28] com.alibaba.nacos.common.remote.client   : [f8bc8c6b-3256-4aee-99d8-1116a1d302bb] Ack server push request, request = NotifySubscriberRequest, requestId = 121
+00:32:09:803  WARN 1612 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+00:32:09:803  WARN 1612 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+00:32:09:804  WARN 1612 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+00:32:29:709  INFO 32084 --- [main] com.heima.search.SearchApplication       : The following 1 profile is active: "local"
+00:32:31:016  INFO 32084 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+00:32:31:023  INFO 32084 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+00:32:31:083  INFO 32084 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 0 Redis repository interfaces.
+00:32:31:381  WARN 32084 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.heima.search]' package. Please check your configuration.
+00:32:31:502  INFO 32084 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f5b4c3cf-9065-37dd-837b-7275cdc82418
+00:32:32:519  INFO 32084 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8078 (http)
+00:32:32:539  INFO 32084 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+00:32:32:540  INFO 32084 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+00:32:32:973  INFO 32084 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+00:32:32:973  INFO 32084 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3239 ms
+00:32:33:143  INFO 32084 --- [main] c.hmall.item.api.config.ItemFeignConfig  : 正在定义Feign的日志级别
+00:32:33:145  INFO 32084 --- [main] c.h.common.config.DefaultFeignConfig     : 正在定义Feign请求拦截器
+00:32:33:146  INFO 32084 --- [main] c.hmall.item.api.config.ItemFeignConfig  : 正在定义ItemClientFallback
+00:32:33:522  INFO 32084 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'item-service' URL not provided. Will try picking an instance via load-balancing.
+00:32:33:990  INFO 32084 --- [main] c.heima.search.config.RestClientConfig   : 正在定义RestHighLevelClient,地址：192.168.230.130:9200,索引库名称:items
+00:32:34:400  INFO 32084 --- [main] c.heima.search.config.RestClientConfig   : 索引库已经存在，先删除原有的索引库
+00:32:34:501  INFO 32084 --- [main] c.heima.search.config.RestClientConfig   : 正在创建索引库
+00:32:34:846  INFO 32084 --- [main] c.heima.search.config.RestClientConfig   : 正在初始化文档
+00:32:37:282  INFO 32084 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 758a29cc-1913-48ee-b016-f59c213e82e1
+00:32:37:282  INFO 32084 --- [main] com.alibaba.nacos.common.remote.client   : [758a29cc-1913-48ee-b016-f59c213e82e1] RpcClient init label, labels = {module=naming, source=sdk}
+00:32:37:285  INFO 32084 --- [main] com.alibaba.nacos.common.remote.client   : [758a29cc-1913-48ee-b016-f59c213e82e1] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+00:32:37:286  INFO 32084 --- [main] com.alibaba.nacos.common.remote.client   : [758a29cc-1913-48ee-b016-f59c213e82e1] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+00:32:37:286  INFO 32084 --- [main] com.alibaba.nacos.common.remote.client   : [758a29cc-1913-48ee-b016-f59c213e82e1] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+00:32:37:287  INFO 32084 --- [main] com.alibaba.nacos.common.remote.client   : [758a29cc-1913-48ee-b016-f59c213e82e1] Try to connect to server on start up, server: {serverIp = '192.168.230.130', server main port = 8848}
+00:32:37:427  INFO 32084 --- [main] com.alibaba.nacos.common.remote.client   : [758a29cc-1913-48ee-b016-f59c213e82e1] Success to connect to server [192.168.230.130:8848] on start up, connectionId = 1741710527151_192.168.230.1_52217
+00:32:37:427  INFO 32084 --- [main] com.alibaba.nacos.common.remote.client   : [758a29cc-1913-48ee-b016-f59c213e82e1] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+00:32:37:427  INFO 32084 --- [main] com.alibaba.nacos.common.remote.client   : [758a29cc-1913-48ee-b016-f59c213e82e1] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$475/0x000000080042e440
+00:32:37:427  INFO 32084 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [758a29cc-1913-48ee-b016-f59c213e82e1] Notify connected event to listeners.
+00:32:37:965  INFO 32084 --- [nacos-grpc-client-executor-6] com.alibaba.nacos.common.remote.client   : [758a29cc-1913-48ee-b016-f59c213e82e1] Receive server push request, request = NotifySubscriberRequest, requestId = 128
+00:32:37:966  INFO 32084 --- [nacos-grpc-client-executor-6] com.alibaba.nacos.common.remote.client   : [758a29cc-1913-48ee-b016-f59c213e82e1] Ack server push request, request = NotifySubscriberRequest, requestId = 128
+00:34:06:110  INFO 32084 --- [main] c.heima.search.config.RestClientConfig   : 初始化文档完成,共90页
+00:34:06:475  INFO 32084 --- [main] c.a.c.sentinel.SentinelWebMvcConfigurer  : [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+00:34:09:250  INFO 32084 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+00:34:09:270  INFO 32084 --- [main] com.hmall.common.config.MqConfig         : 初始化消息转换器.......
+00:34:09:280  INFO 32084 --- [main] com.hmall.common.config.MqConfig         : 初始化消息头信息.......
+00:34:09:282  INFO 32084 --- [main] com.hmall.common.config.MqConfig         : 初始化消息拦截器.....
+00:34:10:481  INFO 32084 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8078 (http) with context path ''
+00:34:10:956  INFO 32084 --- [nacos-grpc-client-executor-25] com.alibaba.nacos.common.remote.client   : [758a29cc-1913-48ee-b016-f59c213e82e1] Receive server push request, request = NotifySubscriberRequest, requestId = 129
+00:34:10:962  INFO 32084 --- [nacos-grpc-client-executor-25] com.alibaba.nacos.common.remote.client   : [758a29cc-1913-48ee-b016-f59c213e82e1] Ack server push request, request = NotifySubscriberRequest, requestId = 129
+00:34:11:474  INFO 32084 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP search-service 10.96.214.85:8078 register finished
+00:34:11:477  INFO 32084 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+00:34:11:485  INFO 32084 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+00:34:11:523  INFO 32084 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+00:34:11:530  INFO 32084 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [192.168.230.130:5672]
+00:34:11:583  INFO 32084 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#39cf7f3c:0/SimpleConnection@179367ff [delegate=amqp://hmall@192.168.230.130:5672//hmall, localPort= 52785]
+00:34:11:677  INFO 32084 --- [main] com.heima.search.SearchApplication       : Started SearchApplication in 102.59 seconds (JVM running for 105.331)
+00:34:11:686  INFO 32084 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=search-service, group=DEFAULT_GROUP
+00:34:11:688  INFO 32084 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=search-service.yaml, group=DEFAULT_GROUP
+00:34:11:689  INFO 32084 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=search-service-local.yaml, group=DEFAULT_GROUP
+00:34:11:972  INFO 32084 --- [nacos-grpc-client-executor-28] com.alibaba.nacos.common.remote.client   : [758a29cc-1913-48ee-b016-f59c213e82e1] Receive server push request, request = NotifySubscriberRequest, requestId = 130
+00:34:11:982  INFO 32084 --- [nacos-grpc-client-executor-28] com.alibaba.nacos.common.remote.client   : [758a29cc-1913-48ee-b016-f59c213e82e1] Ack server push request, request = NotifySubscriberRequest, requestId = 130
+00:34:17:719  INFO 32084 --- [http-nio-8078-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+00:34:17:720  INFO 32084 --- [http-nio-8078-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+00:34:17:722  INFO 32084 --- [http-nio-8078-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+00:34:17:798  INFO 32084 --- [http-nio-8078-exec-1] c.h.search.controller.SearchController   : 商品的品牌信息：null
+00:34:17:799  INFO 32084 --- [http-nio-8078-exec-1] c.h.search.controller.SearchController   : 商品的分类信息：null
+00:34:17:799  INFO 32084 --- [http-nio-8078-exec-1] c.h.search.controller.SearchController   : 商品的关键字段：
+00:34:19:222  INFO 32084 --- [http-nio-8078-exec-2] c.h.search.controller.SearchController   : 共搜索到10000条数据，总页数500
+00:34:19:804  INFO 32084 --- [http-nio-8078-exec-3] c.h.search.controller.SearchController   : 共搜索到10000条数据，总页数500
+00:34:23:698  INFO 32084 --- [http-nio-8078-exec-4] c.h.search.controller.SearchController   : 共搜索到10000条数据，总页数500
+00:34:26:051  INFO 32084 --- [http-nio-8078-exec-5] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:34:35:983  INFO 32084 --- [http-nio-8078-exec-6] c.h.search.controller.SearchController   : 共搜索到10000条数据，总页数500
+00:34:41:655  INFO 32084 --- [http-nio-8078-exec-7] c.h.search.controller.SearchController   : 商品的品牌信息：null
+00:34:41:655  INFO 32084 --- [http-nio-8078-exec-7] c.h.search.controller.SearchController   : 商品的分类信息：手机
+00:34:41:655  INFO 32084 --- [http-nio-8078-exec-7] c.h.search.controller.SearchController   : 商品的关键字段：
+00:34:41:663  INFO 32084 --- [http-nio-8078-exec-8] c.h.search.controller.SearchController   : 共搜索到9957条数据，总页数498
+00:34:50:202  INFO 32084 --- [http-nio-8078-exec-9] c.h.search.controller.SearchController   : 商品的品牌信息：小米
+00:34:50:203  INFO 32084 --- [http-nio-8078-exec-9] c.h.search.controller.SearchController   : 商品的分类信息：手机
+00:34:50:203  INFO 32084 --- [http-nio-8078-exec-9] c.h.search.controller.SearchController   : 商品的关键字段：
+00:34:50:212  INFO 32084 --- [http-nio-8078-exec-10] c.h.search.controller.SearchController   : 共搜索到1227条数据，总页数62
+00:34:53:237  INFO 32084 --- [http-nio-8078-exec-1] c.h.search.controller.SearchController   : 商品的品牌信息：小米
+00:34:53:237  INFO 32084 --- [http-nio-8078-exec-1] c.h.search.controller.SearchController   : 商品的分类信息：null
+00:34:53:237  INFO 32084 --- [http-nio-8078-exec-1] c.h.search.controller.SearchController   : 商品的关键字段：
+00:34:53:242  INFO 32084 --- [http-nio-8078-exec-2] c.h.search.controller.SearchController   : 共搜索到1498条数据，总页数75
+00:34:57:126  INFO 32084 --- [http-nio-8078-exec-3] c.h.search.controller.SearchController   : 商品的品牌信息：小米
+00:34:57:126  INFO 32084 --- [http-nio-8078-exec-3] c.h.search.controller.SearchController   : 商品的分类信息：拉杆箱
+00:34:57:126  INFO 32084 --- [http-nio-8078-exec-3] c.h.search.controller.SearchController   : 商品的关键字段：
+00:34:57:134  INFO 32084 --- [http-nio-8078-exec-4] c.h.search.controller.SearchController   : 共搜索到266条数据，总页数14
+00:34:58:355  INFO 32084 --- [http-nio-8078-exec-5] c.h.search.controller.SearchController   : 商品的品牌信息：小米
+00:34:58:355  INFO 32084 --- [http-nio-8078-exec-5] c.h.search.controller.SearchController   : 商品的分类信息：null
+00:34:58:355  INFO 32084 --- [http-nio-8078-exec-5] c.h.search.controller.SearchController   : 商品的关键字段：
+00:34:58:371  INFO 32084 --- [http-nio-8078-exec-6] c.h.search.controller.SearchController   : 共搜索到1498条数据，总页数75
+00:34:59:206  INFO 32084 --- [http-nio-8078-exec-7] c.h.search.controller.SearchController   : 商品的品牌信息：小米
+00:34:59:206  INFO 32084 --- [http-nio-8078-exec-7] c.h.search.controller.SearchController   : 商品的分类信息：曲面电视
+00:34:59:206  INFO 32084 --- [http-nio-8078-exec-7] c.h.search.controller.SearchController   : 商品的关键字段：
+00:34:59:214  INFO 32084 --- [http-nio-8078-exec-8] c.h.search.controller.SearchController   : 共搜索到5条数据，总页数1
+00:35:00:342  INFO 32084 --- [http-nio-8078-exec-10] c.h.search.controller.SearchController   : 商品的品牌信息：小米
+00:35:00:348  INFO 32084 --- [http-nio-8078-exec-10] c.h.search.controller.SearchController   : 商品的分类信息：null
+00:35:00:348  INFO 32084 --- [http-nio-8078-exec-10] c.h.search.controller.SearchController   : 商品的关键字段：
+00:35:00:348  INFO 32084 --- [http-nio-8078-exec-9] c.h.search.controller.SearchController   : 共搜索到1498条数据，总页数75
+00:35:01:095  INFO 32084 --- [http-nio-8078-exec-1] c.h.search.controller.SearchController   : 商品的品牌信息：null
+00:35:01:095  INFO 32084 --- [http-nio-8078-exec-1] c.h.search.controller.SearchController   : 商品的分类信息：null
+00:35:01:095  INFO 32084 --- [http-nio-8078-exec-1] c.h.search.controller.SearchController   : 商品的关键字段：
+00:35:01:103  INFO 32084 --- [http-nio-8078-exec-2] c.h.search.controller.SearchController   : 共搜索到10000条数据，总页数500
+00:35:05:780  INFO 32084 --- [http-nio-8078-exec-3] c.h.search.controller.SearchController   : 商品的品牌信息：null
+00:35:05:780  INFO 32084 --- [http-nio-8078-exec-3] c.h.search.controller.SearchController   : 商品的分类信息：null
+00:35:05:780  INFO 32084 --- [http-nio-8078-exec-3] c.h.search.controller.SearchController   : 商品的关键字段：小米
+00:35:05:881  INFO 32084 --- [http-nio-8078-exec-4] c.h.search.controller.SearchController   : 共搜索到1439条数据，总页数72
+00:35:08:413  INFO 32084 --- [http-nio-8078-exec-5] c.h.search.controller.SearchController   : 商品的品牌信息：null
+00:35:08:418  INFO 32084 --- [http-nio-8078-exec-5] c.h.search.controller.SearchController   : 商品的分类信息：老花镜
+00:35:08:418  INFO 32084 --- [http-nio-8078-exec-5] c.h.search.controller.SearchController   : 商品的关键字段：小米
+00:35:08:418  INFO 32084 --- [http-nio-8078-exec-6] c.h.search.controller.SearchController   : 共搜索到1条数据，总页数1
+00:35:16:166  INFO 32084 --- [http-nio-8078-exec-7] c.h.search.controller.SearchController   : 商品的品牌信息：null
+00:35:16:166  INFO 32084 --- [http-nio-8078-exec-7] c.h.search.controller.SearchController   : 商品的分类信息：null
+00:35:16:166  INFO 32084 --- [http-nio-8078-exec-7] c.h.search.controller.SearchController   : 商品的关键字段：小米
+00:35:16:166  INFO 32084 --- [http-nio-8078-exec-8] c.h.search.controller.SearchController   : 共搜索到1439条数据，总页数72
+00:35:21:455  INFO 32084 --- [http-nio-8078-exec-10] c.h.search.controller.SearchController   : 共搜索到1439条数据，总页数72
+00:35:22:277  INFO 32084 --- [http-nio-8078-exec-9] c.h.search.controller.SearchController   : 共搜索到1439条数据，总页数72
+00:35:23:521  INFO 32084 --- [http-nio-8078-exec-2] c.h.search.controller.SearchController   : 共搜索到1439条数据，总页数72
+00:35:24:010  INFO 32084 --- [http-nio-8078-exec-1] c.h.search.controller.SearchController   : 共搜索到1439条数据，总页数72
+00:35:47:866  INFO 32084 --- [http-nio-8078-exec-3] c.h.search.controller.SearchController   : 商品的品牌信息：null
+00:35:47:866  INFO 32084 --- [http-nio-8078-exec-3] c.h.search.controller.SearchController   : 商品的分类信息：null
+00:35:47:866  INFO 32084 --- [http-nio-8078-exec-3] c.h.search.controller.SearchController   : 商品的关键字段：小米
+00:35:47:881  INFO 32084 --- [http-nio-8078-exec-4] c.h.search.controller.SearchController   : 共搜索到3条数据，总页数1
+00:35:51:447  INFO 32084 --- [http-nio-8078-exec-5] c.h.search.controller.SearchController   : 商品的品牌信息：null
+00:35:51:447  INFO 32084 --- [http-nio-8078-exec-5] c.h.search.controller.SearchController   : 商品的分类信息：null
+00:35:51:447  INFO 32084 --- [http-nio-8078-exec-5] c.h.search.controller.SearchController   : 商品的关键字段：小米
+00:35:51:447  INFO 32084 --- [http-nio-8078-exec-6] c.h.search.controller.SearchController   : 共搜索到152条数据，总页数8
+00:35:52:540  INFO 32084 --- [http-nio-8078-exec-7] c.h.search.controller.SearchController   : 商品的品牌信息：null
+00:35:52:540  INFO 32084 --- [http-nio-8078-exec-7] c.h.search.controller.SearchController   : 商品的分类信息：null
+00:35:52:540  INFO 32084 --- [http-nio-8078-exec-7] c.h.search.controller.SearchController   : 商品的关键字段：小米
+00:35:52:540  INFO 32084 --- [http-nio-8078-exec-8] c.h.search.controller.SearchController   : 共搜索到3条数据，总页数1
+00:35:55:441  INFO 32084 --- [http-nio-8078-exec-9] c.h.search.controller.SearchController   : 商品的品牌信息：null
+00:35:55:441  INFO 32084 --- [http-nio-8078-exec-9] c.h.search.controller.SearchController   : 商品的分类信息：null
+00:35:55:441  INFO 32084 --- [http-nio-8078-exec-9] c.h.search.controller.SearchController   : 商品的关键字段：小米
+00:35:55:441  INFO 32084 --- [http-nio-8078-exec-10] c.h.search.controller.SearchController   : 共搜索到425条数据，总页数22
+00:35:56:839  INFO 32084 --- [http-nio-8078-exec-2] c.h.search.controller.SearchController   : 商品的品牌信息：null
+00:35:56:839  INFO 32084 --- [http-nio-8078-exec-2] c.h.search.controller.SearchController   : 商品的分类信息：null
+00:35:56:839  INFO 32084 --- [http-nio-8078-exec-2] c.h.search.controller.SearchController   : 商品的关键字段：小米
+00:35:56:847  INFO 32084 --- [http-nio-8078-exec-1] c.h.search.controller.SearchController   : 共搜索到291条数据，总页数15
+00:36:00:327  INFO 32084 --- [http-nio-8078-exec-3] c.h.search.controller.SearchController   : 商品的品牌信息：null
+00:36:00:327  INFO 32084 --- [http-nio-8078-exec-3] c.h.search.controller.SearchController   : 商品的分类信息：null
+00:36:00:327  INFO 32084 --- [http-nio-8078-exec-3] c.h.search.controller.SearchController   : 商品的关键字段：小米
+00:36:00:327  INFO 32084 --- [http-nio-8078-exec-4] c.h.search.controller.SearchController   : 共搜索到131条数据，总页数7
+00:36:05:233  INFO 32084 --- [http-nio-8078-exec-6] c.h.search.controller.SearchController   : 商品的品牌信息：null
+00:36:05:233  INFO 32084 --- [http-nio-8078-exec-6] c.h.search.controller.SearchController   : 商品的分类信息：null
+00:36:05:233  INFO 32084 --- [http-nio-8078-exec-6] c.h.search.controller.SearchController   : 商品的关键字段：小米啊啊
+00:36:05:240  INFO 32084 --- [http-nio-8078-exec-5] c.h.search.controller.SearchController   : 共搜索到131条数据，总页数7
+00:36:09:552  INFO 32084 --- [http-nio-8078-exec-8] c.h.search.controller.SearchController   : 商品的品牌信息：null
+00:36:09:552  INFO 32084 --- [http-nio-8078-exec-8] c.h.search.controller.SearchController   : 商品的分类信息：null
+00:36:09:552  INFO 32084 --- [http-nio-8078-exec-8] c.h.search.controller.SearchController   : 商品的关键字段：小米aa
+00:36:09:568  INFO 32084 --- [http-nio-8078-exec-7] c.h.search.controller.SearchController   : 共搜索到131条数据，总页数7
+00:36:10:941  INFO 32084 --- [http-nio-8078-exec-9] c.h.search.controller.SearchController   : 商品的品牌信息：null
+00:36:10:941  INFO 32084 --- [http-nio-8078-exec-9] c.h.search.controller.SearchController   : 商品的分类信息：null
+00:36:10:941  INFO 32084 --- [http-nio-8078-exec-9] c.h.search.controller.SearchController   : 商品的关键字段：小米aa
+00:36:10:947  INFO 32084 --- [http-nio-8078-exec-10] c.h.search.controller.SearchController   : 共搜索到131条数据，总页数7
+00:36:19:977  INFO 32084 --- [http-nio-8078-exec-1] c.h.search.controller.SearchController   : 商品的品牌信息：null
+00:36:19:977  INFO 32084 --- [http-nio-8078-exec-1] c.h.search.controller.SearchController   : 商品的分类信息：null
+00:36:19:977  INFO 32084 --- [http-nio-8078-exec-1] c.h.search.controller.SearchController   : 商品的关键字段：小米
+00:36:19:977  INFO 32084 --- [http-nio-8078-exec-2] c.h.search.controller.SearchController   : 共搜索到131条数据，总页数7
+00:36:24:838  INFO 32084 --- [http-nio-8078-exec-3] c.h.search.controller.SearchController   : 商品的品牌信息：null
+00:36:24:838  INFO 32084 --- [http-nio-8078-exec-3] c.h.search.controller.SearchController   : 商品的分类信息：null
+00:36:24:838  INFO 32084 --- [http-nio-8078-exec-3] c.h.search.controller.SearchController   : 商品的关键字段：小米
+00:36:24:846  INFO 32084 --- [http-nio-8078-exec-4] c.h.search.controller.SearchController   : 共搜索到131条数据，总页数7
+00:36:25:630  INFO 32084 --- [http-nio-8078-exec-5] c.h.search.controller.SearchController   : 商品的品牌信息：null
+00:36:25:630  INFO 32084 --- [http-nio-8078-exec-5] c.h.search.controller.SearchController   : 商品的分类信息：null
+00:36:25:630  INFO 32084 --- [http-nio-8078-exec-5] c.h.search.controller.SearchController   : 商品的关键字段：小米
+00:36:25:633  INFO 32084 --- [http-nio-8078-exec-6] c.h.search.controller.SearchController   : 共搜索到131条数据，总页数7
+00:36:26:275  INFO 32084 --- [http-nio-8078-exec-8] c.h.search.controller.SearchController   : 商品的品牌信息：null
+00:36:26:280  INFO 32084 --- [http-nio-8078-exec-8] c.h.search.controller.SearchController   : 商品的分类信息：null
+00:36:26:280  INFO 32084 --- [http-nio-8078-exec-8] c.h.search.controller.SearchController   : 商品的关键字段：小米
+00:36:26:298  INFO 32084 --- [http-nio-8078-exec-7] c.h.search.controller.SearchController   : 共搜索到131条数据，总页数7
+00:36:26:507  INFO 32084 --- [http-nio-8078-exec-9] c.h.search.controller.SearchController   : 商品的品牌信息：null
+00:36:26:507  INFO 32084 --- [http-nio-8078-exec-9] c.h.search.controller.SearchController   : 商品的分类信息：null
+00:36:26:507  INFO 32084 --- [http-nio-8078-exec-9] c.h.search.controller.SearchController   : 商品的关键字段：小米
+00:36:26:515  INFO 32084 --- [http-nio-8078-exec-10] c.h.search.controller.SearchController   : 共搜索到131条数据，总页数7
+00:36:26:684  INFO 32084 --- [http-nio-8078-exec-1] c.h.search.controller.SearchController   : 商品的品牌信息：null
+00:36:26:684  INFO 32084 --- [http-nio-8078-exec-1] c.h.search.controller.SearchController   : 商品的分类信息：null
+00:36:26:684  INFO 32084 --- [http-nio-8078-exec-1] c.h.search.controller.SearchController   : 商品的关键字段：小米
+00:36:26:701  INFO 32084 --- [http-nio-8078-exec-2] c.h.search.controller.SearchController   : 共搜索到131条数据，总页数7
+00:36:26:896  INFO 32084 --- [http-nio-8078-exec-3] c.h.search.controller.SearchController   : 商品的品牌信息：null
+00:36:26:896  INFO 32084 --- [http-nio-8078-exec-3] c.h.search.controller.SearchController   : 商品的分类信息：null
+00:36:26:898  INFO 32084 --- [http-nio-8078-exec-3] c.h.search.controller.SearchController   : 商品的关键字段：小米
+00:36:26:900  INFO 32084 --- [http-nio-8078-exec-4] c.h.search.controller.SearchController   : 共搜索到131条数据，总页数7
+00:36:27:095  INFO 32084 --- [http-nio-8078-exec-5] c.h.search.controller.SearchController   : 商品的品牌信息：null
+00:36:27:095  INFO 32084 --- [http-nio-8078-exec-5] c.h.search.controller.SearchController   : 商品的分类信息：null
+00:36:27:095  INFO 32084 --- [http-nio-8078-exec-5] c.h.search.controller.SearchController   : 商品的关键字段：小米
+00:36:27:097  INFO 32084 --- [http-nio-8078-exec-6] c.h.search.controller.SearchController   : 共搜索到131条数据，总页数7
+00:36:27:267  INFO 32084 --- [http-nio-8078-exec-8] c.h.search.controller.SearchController   : 商品的品牌信息：null
+00:36:27:267  INFO 32084 --- [http-nio-8078-exec-8] c.h.search.controller.SearchController   : 商品的分类信息：null
+00:36:27:267  INFO 32084 --- [http-nio-8078-exec-8] c.h.search.controller.SearchController   : 商品的关键字段：小米
+00:36:27:272  INFO 32084 --- [http-nio-8078-exec-7] c.h.search.controller.SearchController   : 共搜索到131条数据，总页数7
+00:36:27:465  INFO 32084 --- [http-nio-8078-exec-9] c.h.search.controller.SearchController   : 商品的品牌信息：null
+00:36:27:465  INFO 32084 --- [http-nio-8078-exec-9] c.h.search.controller.SearchController   : 商品的分类信息：null
+00:36:27:465  INFO 32084 --- [http-nio-8078-exec-9] c.h.search.controller.SearchController   : 商品的关键字段：小米
+00:36:27:472  INFO 32084 --- [http-nio-8078-exec-10] c.h.search.controller.SearchController   : 共搜索到131条数据，总页数7
+00:36:27:649  INFO 32084 --- [http-nio-8078-exec-1] c.h.search.controller.SearchController   : 商品的品牌信息：null
+00:36:27:649  INFO 32084 --- [http-nio-8078-exec-1] c.h.search.controller.SearchController   : 商品的分类信息：null
+00:36:27:649  INFO 32084 --- [http-nio-8078-exec-1] c.h.search.controller.SearchController   : 商品的关键字段：小米
+00:36:27:656  INFO 32084 --- [http-nio-8078-exec-2] c.h.search.controller.SearchController   : 共搜索到131条数据，总页数7
+00:36:27:841  INFO 32084 --- [http-nio-8078-exec-3] c.h.search.controller.SearchController   : 商品的品牌信息：null
+00:36:27:841  INFO 32084 --- [http-nio-8078-exec-3] c.h.search.controller.SearchController   : 商品的分类信息：null
+00:36:27:841  INFO 32084 --- [http-nio-8078-exec-3] c.h.search.controller.SearchController   : 商品的关键字段：小米
+00:36:27:849  INFO 32084 --- [http-nio-8078-exec-4] c.h.search.controller.SearchController   : 共搜索到131条数据，总页数7
+00:36:28:031  INFO 32084 --- [http-nio-8078-exec-5] c.h.search.controller.SearchController   : 商品的品牌信息：null
+00:36:28:031  INFO 32084 --- [http-nio-8078-exec-5] c.h.search.controller.SearchController   : 商品的分类信息：null
+00:36:28:031  INFO 32084 --- [http-nio-8078-exec-5] c.h.search.controller.SearchController   : 商品的关键字段：小米
+00:36:28:034  INFO 32084 --- [http-nio-8078-exec-6] c.h.search.controller.SearchController   : 共搜索到131条数据，总页数7
+00:36:28:213  INFO 32084 --- [http-nio-8078-exec-8] c.h.search.controller.SearchController   : 商品的品牌信息：null
+00:36:28:213  INFO 32084 --- [http-nio-8078-exec-8] c.h.search.controller.SearchController   : 商品的分类信息：null
+00:36:28:213  INFO 32084 --- [http-nio-8078-exec-8] c.h.search.controller.SearchController   : 商品的关键字段：小米
+00:36:28:217  INFO 32084 --- [http-nio-8078-exec-7] c.h.search.controller.SearchController   : 共搜索到131条数据，总页数7
+00:36:28:383  INFO 32084 --- [http-nio-8078-exec-9] c.h.search.controller.SearchController   : 商品的品牌信息：null
+00:36:28:383  INFO 32084 --- [http-nio-8078-exec-9] c.h.search.controller.SearchController   : 商品的分类信息：null
+00:36:28:383  INFO 32084 --- [http-nio-8078-exec-9] c.h.search.controller.SearchController   : 商品的关键字段：小米
+00:36:28:391  INFO 32084 --- [http-nio-8078-exec-10] c.h.search.controller.SearchController   : 共搜索到131条数据，总页数7
+00:36:40:217  INFO 32084 --- [http-nio-8078-exec-1] c.h.search.controller.SearchController   : 商品的品牌信息：null
+00:36:40:217  INFO 32084 --- [http-nio-8078-exec-1] c.h.search.controller.SearchController   : 商品的分类信息：null
+00:36:40:217  INFO 32084 --- [http-nio-8078-exec-1] c.h.search.controller.SearchController   : 商品的关键字段：
+00:36:40:237  INFO 32084 --- [http-nio-8078-exec-2] c.h.search.controller.SearchController   : 共搜索到9017条数据，总页数451
+00:36:52:152  INFO 32084 --- [http-nio-8078-exec-3] c.h.search.controller.SearchController   : 共搜索到10000条数据，总页数500
+00:36:56:288  INFO 32084 --- [http-nio-8078-exec-4] c.h.search.controller.SearchController   : 共搜索到10000条数据，总页数500
+00:37:06:532  WARN 32084 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+00:37:06:532  WARN 32084 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+00:37:06:532  WARN 32084 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+00:37:06:532  WARN 32084 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+00:37:06:548  INFO 32084 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+00:37:06:548  INFO 32084 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+00:37:07:091  INFO 32084 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+00:37:07:091  INFO 32084 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+00:37:08:594  INFO 32084 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+00:37:08:604  INFO 32084 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+00:37:08:943  INFO 32084 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown rpc client, set status to shutdown
+00:37:08:943  INFO 32084 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@41857252[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+00:37:08:944  INFO 32084 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Close current connection 1741710527151_192.168.230.1_52217
+00:37:08:948  INFO 32084 --- [nacos-grpc-client-executor-66] c.a.n.c.remote.client.grpc.GrpcClient    : [1741710527151_192.168.230.1_52217]Ignore complete event,isRunning:false,isAbandon=false
+00:37:08:953  INFO 32084 --- [SpringApplicationShutdownHook] c.a.n.c.remote.client.grpc.GrpcClient    : Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@55bb05d[Running, pool size = 5, active threads = 0, queued tasks = 0, completed tasks = 67]
+00:37:08:968  INFO 32084 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+00:37:08:968  INFO 32084 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped

@@ -1,12 +1,15 @@
 package com.hmall.item.es;
 
 import org.apache.http.HttpHost;
-import org.elasticsearch.action.index.IndexRequest;
+import org.elasticsearch.action.search.SearchRequest;
+import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestClient;
 import org.elasticsearch.client.RestHighLevelClient;
-import org.elasticsearch.client.indices.GetIndexRequest;
-import org.elasticsearch.common.xcontent.XContentType;
+import org.elasticsearch.index.query.QueryBuilders;
+import org.elasticsearch.search.aggregations.AggregationBuilder;
+import org.elasticsearch.search.aggregations.AggregationBuilders;
+import org.elasticsearch.search.builder.SearchSourceBuilder;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -34,24 +37,27 @@ public class ElasticTest {
         this.client.close();
     }
 
-    @Test
-    void testExistsIndex() throws IOException {
-        // 1.创建Request对象
-        GetIndexRequest request = new GetIndexRequest("items");
-        // 2.发送请求
-        boolean exists = client.indices().exists(request, RequestOptions.DEFAULT);
-        // 3.输出
-        System.err.println(exists ? "索引库已经存在！" : "索引库不存在！");
-    }
 
     @Test
-    void testIndexDocument() throws IOException {
-        //1:创建request对象
-        IndexRequest request = new IndexRequest("indexName").id("1");
-        //2:准备json文档
-        request.source("", XContentType.JSON);
-        //3:发送请求
-        client.index(request, RequestOptions.DEFAULT);
+    void testAgg() throws IOException {
+        //1：创建request对象
+        SearchRequest request = new SearchRequest("items");
+        //2：配置request参数
+        request.source()
+                .query(QueryBuilders.matchAllQuery());
+        request.source().size(0);
+        request.source()
+                .aggregation(AggregationBuilders
+                        .terms("brand_agg")
+                        .field("brand")
+                        .size(20)
+                        .subAggregation(AggregationBuilders
+                                .stats("stats_meric")
+                                .field("price")));
+
+        //3：发送请求
+        SearchResponse response = client.search(request, RequestOptions.DEFAULT);
+
     }
 
 
