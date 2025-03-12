@@ -70,3 +70,93 @@
 00:37:09:495  INFO 17552 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 00:37:09:549  INFO 17552 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
 00:37:09:576  INFO 17552 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+20:52:21:010  INFO 2944 --- [main] com.hmall.cart.CartApplication           : The following 1 profile is active: "local"
+20:52:23:030  INFO 2944 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+20:52:23:035  INFO 2944 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+20:52:23:080  INFO 2944 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 0 Redis repository interfaces.
+20:52:23:516  INFO 2944 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=64118142-f14e-38f0-a181-d5d44d6f02b6
+20:52:24:511  INFO 2944 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+20:52:24:526  INFO 2944 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+20:52:24:527  INFO 2944 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+20:52:24:930  INFO 2944 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+20:52:24:930  INFO 2944 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3887 ms
+20:52:25:125  INFO 2944 --- [main] c.hmall.item.api.config.ItemFeignConfig  : 正在定义Feign的日志级别
+20:52:25:126  INFO 2944 --- [main] c.h.common.config.DefaultFeignConfig     : 正在定义Feign请求拦截器
+20:52:25:127  INFO 2944 --- [main] c.hmall.item.api.config.ItemFeignConfig  : 正在定义ItemClientFallback
+20:52:25:640  INFO 2944 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'item-service' URL not provided. Will try picking an instance via load-balancing.
+20:52:30:005  INFO 2944 --- [main] c.a.c.sentinel.SentinelWebMvcConfigurer  : [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+20:52:31:846  INFO 2944 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+20:52:31:869  INFO 2944 --- [main] com.hmall.common.config.MqConfig         : 初始化消息转换器.......
+20:52:31:879  INFO 2944 --- [main] com.hmall.common.config.MqConfig         : 初始化消息头信息.......
+20:52:31:882  INFO 2944 --- [main] com.hmall.common.config.MqConfig         : 初始化消息拦截器.....
+20:52:32:160  WARN 2944 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+20:52:32:161  WARN 2944 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+20:52:32:163  WARN 2944 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+20:52:32:164  WARN 2944 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+20:52:35:621  INFO 2944 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 301e1489-5943-4e3b-8680-0ea0f1a71e5b
+20:52:35:622  INFO 2944 --- [main] com.alibaba.nacos.common.remote.client   : [301e1489-5943-4e3b-8680-0ea0f1a71e5b] RpcClient init label, labels = {module=naming, source=sdk}
+20:52:35:629  INFO 2944 --- [main] com.alibaba.nacos.common.remote.client   : [301e1489-5943-4e3b-8680-0ea0f1a71e5b] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+20:52:35:629  INFO 2944 --- [main] com.alibaba.nacos.common.remote.client   : [301e1489-5943-4e3b-8680-0ea0f1a71e5b] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+20:52:35:630  INFO 2944 --- [main] com.alibaba.nacos.common.remote.client   : [301e1489-5943-4e3b-8680-0ea0f1a71e5b] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+20:52:35:633  INFO 2944 --- [main] com.alibaba.nacos.common.remote.client   : [301e1489-5943-4e3b-8680-0ea0f1a71e5b] Try to connect to server on start up, server: {serverIp = '192.168.230.130', server main port = 8848}
+20:52:35:804  INFO 2944 --- [main] com.alibaba.nacos.common.remote.client   : [301e1489-5943-4e3b-8680-0ea0f1a71e5b] Success to connect to server [192.168.230.130:8848] on start up, connectionId = 1741783956130_192.168.230.1_51173
+20:52:35:804  INFO 2944 --- [main] com.alibaba.nacos.common.remote.client   : [301e1489-5943-4e3b-8680-0ea0f1a71e5b] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+20:52:35:804  INFO 2944 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [301e1489-5943-4e3b-8680-0ea0f1a71e5b] Notify connected event to listeners.
+20:52:35:804  INFO 2944 --- [main] com.alibaba.nacos.common.remote.client   : [301e1489-5943-4e3b-8680-0ea0f1a71e5b] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$475/0x000000080042c440
+20:52:35:930  INFO 2944 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8083 (http) with context path ''
+20:52:35:953  INFO 2944 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP cart-service 10.96.214.85:8083 register finished
+20:55:37:720  INFO 26536 --- [main] com.hmall.cart.CartApplication           : The following 1 profile is active: "local"
+20:55:39:713  INFO 26536 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+20:55:39:717  INFO 26536 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+20:55:39:759  INFO 26536 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 0 Redis repository interfaces.
+20:55:40:329  INFO 26536 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=64118142-f14e-38f0-a181-d5d44d6f02b6
+20:55:41:256  INFO 26536 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+20:55:41:272  INFO 26536 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+20:55:41:272  INFO 26536 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+20:55:41:730  INFO 26536 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+20:55:41:730  INFO 26536 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3981 ms
+20:55:41:945  INFO 26536 --- [main] c.hmall.item.api.config.ItemFeignConfig  : 正在定义Feign的日志级别
+20:55:41:946  INFO 26536 --- [main] c.h.common.config.DefaultFeignConfig     : 正在定义Feign请求拦截器
+20:55:41:947  INFO 26536 --- [main] c.hmall.item.api.config.ItemFeignConfig  : 正在定义ItemClientFallback
+20:55:42:325  INFO 26536 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'item-service' URL not provided. Will try picking an instance via load-balancing.
+20:55:46:109  INFO 26536 --- [main] c.a.c.sentinel.SentinelWebMvcConfigurer  : [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+20:55:47:904  INFO 26536 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+20:55:47:926  INFO 26536 --- [main] com.hmall.common.config.MqConfig         : 初始化消息转换器.......
+20:55:47:934  INFO 26536 --- [main] com.hmall.common.config.MqConfig         : 初始化消息头信息.......
+20:55:47:937  INFO 26536 --- [main] com.hmall.common.config.MqConfig         : 初始化消息拦截器.....
+20:55:50:867  INFO 26536 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of b4e14090-a8ad-4fcd-9f66-ae9163170aae
+20:55:50:868  INFO 26536 --- [main] com.alibaba.nacos.common.remote.client   : [b4e14090-a8ad-4fcd-9f66-ae9163170aae] RpcClient init label, labels = {module=naming, source=sdk}
+20:55:50:877  INFO 26536 --- [main] com.alibaba.nacos.common.remote.client   : [b4e14090-a8ad-4fcd-9f66-ae9163170aae] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+20:55:50:877  INFO 26536 --- [main] com.alibaba.nacos.common.remote.client   : [b4e14090-a8ad-4fcd-9f66-ae9163170aae] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+20:55:50:878  INFO 26536 --- [main] com.alibaba.nacos.common.remote.client   : [b4e14090-a8ad-4fcd-9f66-ae9163170aae] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+20:55:50:879  INFO 26536 --- [main] com.alibaba.nacos.common.remote.client   : [b4e14090-a8ad-4fcd-9f66-ae9163170aae] Try to connect to server on start up, server: {serverIp = '192.168.230.130', server main port = 8848}
+20:55:51:027  INFO 26536 --- [main] com.alibaba.nacos.common.remote.client   : [b4e14090-a8ad-4fcd-9f66-ae9163170aae] Success to connect to server [192.168.230.130:8848] on start up, connectionId = 1741784151378_192.168.230.1_51541
+20:55:51:027  INFO 26536 --- [main] com.alibaba.nacos.common.remote.client   : [b4e14090-a8ad-4fcd-9f66-ae9163170aae] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+20:55:51:027  INFO 26536 --- [main] com.alibaba.nacos.common.remote.client   : [b4e14090-a8ad-4fcd-9f66-ae9163170aae] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$475/0x000000080042d840
+20:55:51:027  INFO 26536 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [b4e14090-a8ad-4fcd-9f66-ae9163170aae] Notify connected event to listeners.
+20:55:51:101  INFO 26536 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8083 (http) with context path ''
+20:55:51:119  INFO 26536 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP cart-service 10.96.214.85:8083 register finished
+20:55:51:574  INFO 26536 --- [nacos-grpc-client-executor-9] com.alibaba.nacos.common.remote.client   : [b4e14090-a8ad-4fcd-9f66-ae9163170aae] Receive server push request, request = NotifySubscriberRequest, requestId = 7
+20:55:51:579  INFO 26536 --- [nacos-grpc-client-executor-9] com.alibaba.nacos.common.remote.client   : [b4e14090-a8ad-4fcd-9f66-ae9163170aae] Ack server push request, request = NotifySubscriberRequest, requestId = 7
+20:55:52:292  INFO 26536 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+20:55:52:299  INFO 26536 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+20:55:52:361  INFO 26536 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+20:55:52:545  INFO 26536 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [192.168.230.130:5672]
+20:55:52:625  INFO 26536 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#7e4c0bc7:0/SimpleConnection@36c8e1c6 [delegate=amqp://hmall@192.168.230.130:5672//hmall, localPort= 51545]
+20:55:52:762  INFO 26536 --- [main] com.hmall.cart.CartApplication           : Started CartApplication in 23.71 seconds (JVM running for 27.036)
+20:55:52:793  INFO 26536 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=cart-service, group=DEFAULT_GROUP
+20:55:52:795  INFO 26536 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=cart-service.yaml, group=DEFAULT_GROUP
+20:55:52:795  INFO 26536 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=cart-service-local.yaml, group=DEFAULT_GROUP
+21:02:49:557  INFO 26536 --- [http-nio-8083-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+21:02:49:562  INFO 26536 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+21:02:49:591  INFO 26536 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 28 ms
+21:02:50:488  INFO 26536 --- [http-nio-8083-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+21:02:51:373  INFO 26536 --- [http-nio-8083-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+21:02:51:406 DEBUG 26536 --- [http-nio-8083-exec-1] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+21:02:51:502 DEBUG 26536 --- [http-nio-8083-exec-1] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+21:02:51:589 DEBUG 26536 --- [http-nio-8083-exec-1] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 2
+21:02:52:877  INFO 26536 --- [nacos-grpc-client-executor-114] com.alibaba.nacos.common.remote.client   : [b4e14090-a8ad-4fcd-9f66-ae9163170aae] Receive server push request, request = NotifySubscriberRequest, requestId = 21
+21:02:52:879  INFO 26536 --- [nacos-grpc-client-executor-114] com.alibaba.nacos.common.remote.client   : [b4e14090-a8ad-4fcd-9f66-ae9163170aae] Ack server push request, request = NotifySubscriberRequest, requestId = 21
+21:26:43:769 DEBUG 26536 --- [http-nio-8083-exec-2] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+21:26:43:771 DEBUG 26536 --- [http-nio-8083-exec-2] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+21:26:43:778 DEBUG 26536 --- [http-nio-8083-exec-2] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 2

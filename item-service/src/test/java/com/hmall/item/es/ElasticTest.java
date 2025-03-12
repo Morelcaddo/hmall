@@ -6,7 +6,10 @@ import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestClient;
 import org.elasticsearch.client.RestHighLevelClient;
+import org.elasticsearch.common.lucene.search.function.CombineFunction;
 import org.elasticsearch.index.query.QueryBuilders;
+import org.elasticsearch.index.query.functionscore.FunctionScoreQueryBuilder;
+import org.elasticsearch.index.query.functionscore.ScoreFunctionBuilders;
 import org.elasticsearch.search.aggregations.AggregationBuilder;
 import org.elasticsearch.search.aggregations.AggregationBuilders;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
@@ -42,18 +45,19 @@ public class ElasticTest {
     void testAgg() throws IOException {
         //1：创建request对象
         SearchRequest request = new SearchRequest("items");
-        //2：配置request参数
-        request.source()
-                .query(QueryBuilders.matchAllQuery());
-        request.source().size(0);
-        request.source()
-                .aggregation(AggregationBuilders
-                        .terms("brand_agg")
-                        .field("brand")
-                        .size(20)
-                        .subAggregation(AggregationBuilders
-                                .stats("stats_meric")
-                                .field("price")));
+        FunctionScoreQueryBuilder.FilterFunctionBuilder[] filterFunctions
+                = {new FunctionScoreQueryBuilder.FilterFunctionBuilder(
+                QueryBuilders.termQuery("isAD", true),
+                ScoreFunctionBuilders.weightFactorFunction(1000))
+        };
+
+
+        FunctionScoreQueryBuilder functionScoreQuery =
+                QueryBuilders.functionScoreQuery(QueryBuilders.matchAllQuery(),
+                        filterFunctions).boostMode(
+                        CombineFunction.REPLACE);
+
+        request.source().query(functionScoreQuery);
 
         //3：发送请求
         SearchResponse response = client.search(request, RequestOptions.DEFAULT);

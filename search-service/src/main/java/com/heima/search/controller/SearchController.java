@@ -15,8 +15,11 @@ import org.elasticsearch.action.search.SearchRequest;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestHighLevelClient;
+import org.elasticsearch.common.lucene.search.function.CombineFunction;
 import org.elasticsearch.index.query.BoolQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
+import org.elasticsearch.index.query.functionscore.FunctionScoreQueryBuilder;
+import org.elasticsearch.index.query.functionscore.ScoreFunctionBuilders;
 import org.elasticsearch.search.SearchHit;
 import org.elasticsearch.search.SearchHits;
 import org.elasticsearch.search.aggregations.AggregationBuilders;
@@ -69,15 +72,41 @@ public class SearchController {
             boolQuery.filter(QueryBuilders.rangeQuery("price").lte(query.getMaxPrice()));
         }
 
-        request.source().query(boolQuery);
 
-        if (sortBy != null && !sortBy.isEmpty()) {
+        FunctionScoreQueryBuilder.FilterFunctionBuilder[] filterFunctions
+                = {new FunctionScoreQueryBuilder.FilterFunctionBuilder(
+                QueryBuilders.termQuery("isAD", true),
+                ScoreFunctionBuilders.weightFactorFunction(1000))
+        };
+
+
+        FunctionScoreQueryBuilder functionScoreQuery =
+                QueryBuilders.functionScoreQuery(boolQuery,
+                        filterFunctions).boostMode(
+                        CombineFunction.REPLACE);
+
+        request.source().query(functionScoreQuery);
+
+
+//        request.source().query(boolQuery);
+
+
+//        if (sortBy == null || sortBy.isEmpty()) {
+//            sortBy = "updateTime";
+//        }
+//        if (isAsc == null) {
+//            isAsc = true;
+//        }
+
+        if(sortBy != null && !sortBy.isEmpty()){
             if (isAsc) {
                 request.source().sort(sortBy, SortOrder.ASC);
             } else {
                 request.source().sort(sortBy, SortOrder.DESC);
             }
+            request.source().sort("_score", SortOrder.DESC);
         }
+
 
         request.source().from((pageNo - 1) * pageSize).size(pageSize);
 
