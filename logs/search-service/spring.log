@@ -1471,3 +1471,22 @@ org.elasticsearch.ElasticsearchStatusException: Elasticsearch exception [type=se
 21:45:45:118  INFO 28480 --- [http-nio-8078-exec-9] c.h.search.controller.SearchController   : 共搜索到174条数据，总页数9
 21:45:53:533  INFO 28480 --- [http-nio-8078-exec-10] c.h.search.controller.SearchController   : 共搜索到10000条数据，总页数500
 21:46:04:977  INFO 28480 --- [http-nio-8078-exec-1] c.h.search.controller.SearchController   : 共搜索到10000条数据，总页数500
+23:23:04:837  WARN 28480 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+23:23:04:837  WARN 28480 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+23:23:04:856  WARN 28480 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+23:23:04:863  WARN 28480 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+23:23:05:043  INFO 28480 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+23:23:05:047  INFO 28480 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+23:23:05:855  INFO 28480 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+23:23:05:855  INFO 28480 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+23:23:07:239  INFO 28480 --- [nacos-grpc-client-executor-1227] com.alibaba.nacos.common.remote.client   : [d34703b9-1a60-4ca4-ae5e-668e89d59ca2] Receive server push request, request = NotifySubscriberRequest, requestId = 40
+23:23:07:246  INFO 28480 --- [nacos-grpc-client-executor-1227] com.alibaba.nacos.common.remote.client   : [d34703b9-1a60-4ca4-ae5e-668e89d59ca2] Ack server push request, request = NotifySubscriberRequest, requestId = 40
+23:23:07:245  INFO 28480 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+23:23:07:258  INFO 28480 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+23:23:07:595  INFO 28480 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown rpc client, set status to shutdown
+23:23:07:596  INFO 28480 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@1a163a40[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+23:23:07:596  INFO 28480 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Close current connection 1741787021589_192.168.230.1_59348
+23:23:07:600  INFO 28480 --- [nacos-grpc-client-executor-1229] c.a.n.c.remote.client.grpc.GrpcClient    : [1741787021589_192.168.230.1_59348]Ignore complete event,isRunning:false,isAbandon=false
+23:23:07:612  INFO 28480 --- [SpringApplicationShutdownHook] c.a.n.c.remote.client.grpc.GrpcClient    : Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@18ffcdef[Running, pool size = 5, active threads = 0, queued tasks = 0, completed tasks = 1230]
+23:23:07:642  INFO 28480 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+23:23:07:643  INFO 28480 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped

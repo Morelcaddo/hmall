@@ -327,3 +327,14 @@ java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 13 millise
 21:42:46:209  INFO 7792 --- [nacos-grpc-client-executor-627] com.alibaba.nacos.common.remote.client   : [857c761b-5b17-44b3-871f-9a30801ee91a] Ack server push request, request = NotifySubscriberRequest, requestId = 33
 21:44:54:642  INFO 7792 --- [nacos-grpc-client-executor-654] com.alibaba.nacos.common.remote.client   : [857c761b-5b17-44b3-871f-9a30801ee91a] Receive server push request, request = NotifySubscriberRequest, requestId = 37
 21:44:54:644  INFO 7792 --- [nacos-grpc-client-executor-654] com.alibaba.nacos.common.remote.client   : [857c761b-5b17-44b3-871f-9a30801ee91a] Ack server push request, request = NotifySubscriberRequest, requestId = 37
+23:23:05:225  WARN 7792 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+23:23:05:225  WARN 7792 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+23:23:05:242  WARN 7792 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+23:23:05:254  WARN 7792 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+23:23:05:432  INFO 7792 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+23:23:05:467  INFO 7792 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+23:23:05:841  INFO 7792 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown rpc client, set status to shutdown
+23:23:05:842  INFO 7792 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@5b479385[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+23:23:05:843  INFO 7792 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Close current connection 1741784099038_192.168.230.1_51336
+23:23:05:851  INFO 7792 --- [nacos-grpc-client-executor-1867] c.a.n.c.remote.client.grpc.GrpcClient    : [1741784099038_192.168.230.1_51336]Ignore complete event,isRunning:false,isAbandon=false
+23:23:05:877  INFO 7792 --- [SpringApplicationShutdownHook] c.a.n.c.remote.client.grpc.GrpcClient    : Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@1394b4cf[Running, pool size = 5, active threads = 0, queued tasks = 0, completed tasks = 1868]

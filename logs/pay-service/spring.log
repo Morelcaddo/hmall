@@ -199,3 +199,16 @@
 20:58:00:351  INFO 22552 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=pay-service, group=DEFAULT_GROUP
 20:58:00:352  INFO 22552 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=pay-service.yaml, group=DEFAULT_GROUP
 20:58:00:353  INFO 22552 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=pay-service-local.yaml, group=DEFAULT_GROUP
+23:23:04:916  WARN 22552 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+23:23:04:916  WARN 22552 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+23:23:04:938  WARN 22552 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+23:23:04:947  WARN 22552 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+23:23:06:502  INFO 22552 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+23:23:06:514  INFO 22552 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+23:23:06:860  INFO 22552 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown rpc client, set status to shutdown
+23:23:06:861  INFO 22552 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@3fcfd0c6[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+23:23:06:862  INFO 22552 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Close current connection 1741784279155_192.168.230.1_51972
+23:23:06:871  INFO 22552 --- [nacos-grpc-client-executor-1788] c.a.n.c.remote.client.grpc.GrpcClient    : [1741784279155_192.168.230.1_51972]Ignore complete event,isRunning:false,isAbandon=false
+23:23:06:878  INFO 22552 --- [SpringContextShutdownHook] c.a.n.c.remote.client.grpc.GrpcClient    : Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@24c872c1[Running, pool size = 5, active threads = 0, queued tasks = 0, completed tasks = 1789]
+23:23:06:896  INFO 22552 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+23:23:06:956  INFO 22552 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
